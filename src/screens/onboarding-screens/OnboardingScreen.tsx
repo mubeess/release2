@@ -84,20 +84,18 @@ export default function OnboardingScreen({ navigation }) {
   const { colors } = useTheme();
   const slides = [
     {
-      title: 'Welcome Home!',
-      body: `Your home page, where you have a quick link 
-    and view of what’s important`,
+      title: `A Director’s Home!`,
+      body: `All data and analytics available for school directors at a go`,
       image: require('../../../assets/screen1.png'),
     },
     {
-      title: 'Payment at your finger tips',
-      body: `School fees payment at your finger tips, no need 
-    for a bank visit`,
+      title: 'Marked and sealed',
+      body: `From the comfort of their phone, a subject teacher can assess and score their students`,
       image: require('../../../assets/screen2.png'),
     },
     {
-      title: 'Result & Performance',
-      body: `Have your child’s result and performance always ready and with you on the go`,
+      title: 'Behavioural assessment',
+      body: `Every class teacher will have the ability to assess their student behavioural skills`,
       image: require('../../../assets/screen3.png'),
     },
   ];

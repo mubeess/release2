@@ -6,8 +6,8 @@ const config = {
     API_BASE_URL: "https://api.safsims-stage.com",
   },
   production: {
-    API_BASE_URL: "https://api.production.safsims.com",
+    API_BASE_URL: "https://api.safsims.com",
   },
 };
 
-export default config[process.env.REACT_APP_ENV || process.env.NODE_ENV || ""];
+export default config['production'];

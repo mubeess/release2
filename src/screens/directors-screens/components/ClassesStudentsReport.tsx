@@ -60,7 +60,7 @@ export default function ClassesStudentsReport() {
   const reanimatedIconStyle = useAnimatedStyle(() => {
     const rotate = interpolate(
       heightValue.value,
-      [0, height + height],
+      [0, height + height+height],
       [0, 180]
     );
     return {
@@ -79,7 +79,7 @@ export default function ClassesStudentsReport() {
           style={styles.iconContainer}
           onPress={() => {
             heightValue.value == 0
-              ? (heightValue.value = withTiming(height + height, {
+              ? (heightValue.value = withTiming(height + height+height, {
                   duration: 500,
                 }))
               : (heightValue.value = withTiming(0, { duration: 500 }));
