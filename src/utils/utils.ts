@@ -1,27 +1,33 @@
 // @ts-ignore
 
-import currencyToSymbolMap from 'currency-symbol-map/map';
-import LocaleCurrency from 'locale-currency';
-import Toast from 'react-native-toast-message';
-import countryList from 'react-select-country-list';
-import { FIX_ANY } from './types';
+import currencyToSymbolMap from "currency-symbol-map/map";
+import LocaleCurrency from "locale-currency";
+import Toast from "react-native-toast-message";
+import countryList from "react-select-country-list";
+import { FIX_ANY } from "./types";
+import httpClient from "./http-client";
 
-export const ONBOARDING_ROLE = 'ONBOARDING_ROLE';
-export const DIRECTOR_ROLE = 'DIRECTOR';
-export const ADMIN_ROLE = 'Admin';
+export const ONBOARDING_ROLE = "ONBOARDING_ROLE";
+export const DIRECTOR_ROLE = "DIRECTOR";
+export const ADMIN_ROLE = "Admin";
 
 export const InsertBeginning = (originalArray, objectToInsert) => {
   return [objectToInsert, ...originalArray];
 };
 
-export const findIndexInArray = (originalArray, objectToFInd, key, key2?: string | undefined) => {
+export const findIndexInArray = (
+  originalArray,
+  objectToFInd,
+  key,
+  key2?: string | undefined
+) => {
   return originalArray.findIndex((item) => {
     if (key2) return item[key][key2] === objectToFInd[key][key2];
     else return item[key] === objectToFInd[key];
   });
 };
 
-export const returnUpdatedList = (newObj, oldList, key = 'id', key2 = '') => {
+export const returnUpdatedList = (newObj, oldList, key = "id", key2 = "") => {
   const indexOfLocal = findIndexInArray(oldList, newObj, key, key2);
   if (indexOfLocal !== -1) oldList[indexOfLocal] = newObj;
   return oldList;
@@ -42,7 +48,7 @@ export const removeDuplicates = (myArr: any[], prop: any) => {
 };
 
 export const converBase64ToImageFile = (dataurl: string, filename: string) => {
-  const arr = dataurl.split(','),
+  const arr = dataurl.split(","),
     item = arr[0].match(/:(.*?);/),
     mime = arr[0].match(/:(.*?);/)![1],
     bstr = atob(arr[1]);
@@ -60,11 +66,11 @@ export const convertFileToBase64 = (file, callback) => {
   if (file !== undefined) {
     const reader = new FileReader();
     reader.addEventListener(
-      'load',
+      "load",
       () => {
         callback(reader.result);
       },
-      false,
+      false
     );
     if (file) {
       reader.readAsDataURL(file);
@@ -77,12 +83,17 @@ interface IObj {
   message: string;
 }
 
-export const handleError = (err: any, obj?: IObj, show = true, override = false) => {
+export const handleError = (
+  err: any,
+  obj?: IObj,
+  show = true,
+  override = false
+) => {
   // obj = { code: 404, message: "An error occured" } ||
   //  [{ code: 404, message: "An error occured" }]
   if (process) {
     const NODE_ENV = process.env.NODE_ENV;
-    if (NODE_ENV === 'development') {
+    if (NODE_ENV === "development") {
       console.error(err);
     }
   }
@@ -97,22 +108,23 @@ export const handleError = (err: any, obj?: IObj, show = true, override = false)
   let msg;
   let statusCode: number;
   const constMessage =
-    'Sorry, an error has occurred, Please try again or if issue persist, contact support.';
+    "Sorry, an error has occurred, Please try again or if issue persist, contact support.";
   const msgObj = {
-    '404': "We can't find the resource you are looking for.",
-    '400': 'Sorry, an unexpected error occurred. Please try again.',
-    '600': 'Sorry, an error occurred. Please check your internet conection and try again.',
-    '500':
-      'Sorry Something went wrong. We have logged this error and our engineers are working to fix it as soon as possible. If you need immediate assistance, please contact our support.',
-    '401': '',
-    '403':
-      'Sorry, You do not have a permission to access the document or program that you requested',
-    '408': 'Sorry, your request took too long to process, please try again.',
-    '502':
+    "404": "We can't find the resource you are looking for.",
+    "400": "Sorry, an unexpected error occurred. Please try again.",
+    "600":
+      "Sorry, an error occurred. Please check your internet conection and try again.",
+    "500":
+      "Sorry Something went wrong. We have logged this error and our engineers are working to fix it as soon as possible. If you need immediate assistance, please contact our support.",
+    "401": "",
+    "403":
+      "Sorry, You do not have a permission to access the document or program that you requested",
+    "408": "Sorry, your request took too long to process, please try again.",
+    "502":
       "Sorry, we are currently experiencing a glitch with this service. Don't worry we are already aware and service will be restored as soon as possible. If you need immediate assistance, please contact our support.",
-    '503':
+    "503":
       "Sorry, we are currently experiencing a glitch with this service. Don't worry we are already aware and service will be restored as soon as possible. If you need immediate assistance, please contact our support.",
-    '504': 'Sorry, your request took too long to process, please try again.',
+    "504": "Sorry, your request took too long to process, please try again.",
   };
   if (response && response instanceof Object) {
     statusCode = response?.status;
@@ -120,7 +132,7 @@ export const handleError = (err: any, obj?: IObj, show = true, override = false)
     msg = data.message || data.error || constMessage;
     // Might fallback to this.
     // msgObj[`${statusCode}`] = msg;
-  } else if (err?.name === 'ApiError') {
+  } else if (err?.name === "ApiError") {
     statusCode = err?.status;
     msg = err?.body?.message || err?.body?.error || constMessage;
   } else {
@@ -140,21 +152,21 @@ export const handleError = (err: any, obj?: IObj, show = true, override = false)
       msgObj[`${x.code}`] = x.message;
     });
   }
-  if (statusCode === 401 && msgObj['401'] === '') {
+  if (statusCode === 401 && msgObj["401"] === "") {
     return;
   }
   if (show && (statusCode !== 401 || override)) {
     Toast.show({
-      type: 'error',
-      text1: 'An error occurred',
+      type: "error",
+      text1: "An error occurred",
       text2: msgObj[statusCode],
     });
   }
   return { success: false, statusCode, message: msg };
 };
 
-export const stringToHslColor = (text = '', s = 50, l = 80) => {
-  const str = text.replace(' ', '');
+export const stringToHslColor = (text = "", s = 50, l = 80) => {
+  const str = text.replace(" ", "");
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     // eslint-disable-next-line
@@ -166,12 +178,12 @@ export const stringToHslColor = (text = '', s = 50, l = 80) => {
 
 export const onlyNumbers = (e: FIX_ANY) => {
   const num = /[^0-9]/gi;
-  e.target.value = e.target.value.replace(num, ' ');
+  e.target.value = e.target.value.replace(num, " ");
 };
 
 export const decimalNumbers = (e: FIX_ANY) => {
   const num = /^\d+(\.\d)?\d*$/;
-  e.target.value = e.target.value.replace(num, ' ');
+  e.target.value = e.target.value.replace(num, " ");
 };
 
 //rounds up a number(value) to x decimal places
@@ -187,13 +199,13 @@ export const postion = (number: number) => {
     k = number % 100;
 
   if (lastDigit === 1 && k !== 11) {
-    return number + 'st';
+    return number + "st";
   } else if (lastDigit === 2 && k !== 12) {
-    return number + 'nd';
+    return number + "nd";
   } else if (lastDigit === 3 && k !== 13) {
-    return number + 'rd';
+    return number + "rd";
   } else {
-    return number + 'th';
+    return number + "th";
   }
 };
 
@@ -201,18 +213,25 @@ export const Countries = countryList()
   .getData()
   .map((item) => ({
     ...item,
-    currency: currencyToSymbolMap[LocaleCurrency.getCurrency(item.value) || 'NGN'],
+    currency:
+      currencyToSymbolMap[LocaleCurrency.getCurrency(item.value) || "NGN"],
   }));
 
 interface IPayload {
-  type: 'error' | 'success' | 'warning';
+  type: "error" | "success" | "warning";
   message: string;
   title?: string;
 }
 export const Notify = ({ type, message, title }: IPayload) => {
   Toast.show({
-    type: 'error',
+    type: "error",
     text1: title || type.toUpperCase(),
     text2: message,
   });
+};
+
+let school_id = "";
+export const setSchoolId = async (id: string) => {
+  school_id = id;
+  httpClient.defaults.headers["X-TENANT-ID"] = id;
 };

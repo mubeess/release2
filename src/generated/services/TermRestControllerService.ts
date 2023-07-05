@@ -6,8 +6,9 @@ import type { TermDto } from "../models/TermDto";
 import type { TermRequest } from "../models/TermRequest";
 
 import type { CancelablePromise } from "../core/CancelablePromise";
-import { OpenAPI } from "../core/OpenAPI";
+// import { OpenAPI } from "../core/OpenAPI";
 import { request as __request } from "../core/request";
+import { OpenAPI } from "../core/OpenAPI";
 
 export class TermRestControllerService {
   /**

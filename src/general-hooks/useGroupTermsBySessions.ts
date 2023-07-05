@@ -17,6 +17,7 @@ const useGroupTermsBySessions = ({
   urlTermId,
 }: IProps) => {
   const { terms: allTerms, loading } = useAllTermsGet();
+
   const urlTerm = allTerms.find((term) => term.term_id === urlTermId);
 
   const currentTermDTO = useAppSelector(

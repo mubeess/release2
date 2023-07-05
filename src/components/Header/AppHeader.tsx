@@ -18,8 +18,8 @@ import SideMenu from "../SideMenu/SideMenu";
 import AvatarMenu from "./AvatarMenu";
 import useGroupTermsBySessions from "@safsims/general-hooks/useGroupTermsBySessions";
 import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
-import { useEffect } from "react";
 import useCurrentTermGet from "@safsims/general-hooks/useCurrentTermGet";
+import { useEffect } from "react";
 
 interface IProps {
   onBack?: () => void;
@@ -29,11 +29,12 @@ interface IProps {
 
 const AppHeader = ({ onBack, navigation, pageTitle }: IProps) => {
   const { colors, dark } = useTheme();
-  const { currentTerm } = useCurrentTermGet();
-  const { selectedTerm } = useGroupTermsBySessions({
-    urlTermId: currentTerm?.term_id,
-  });
+
   const data = useAppSelector((state) => state);
+  const { currentTerm: current } = useCurrentTermGet();
+  const { selectedTerm } = useGroupTermsBySessions({
+    urlTermId: current?.term_id,
+  });
 
   return (
     <>
@@ -47,6 +48,11 @@ const AppHeader = ({ onBack, navigation, pageTitle }: IProps) => {
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Image
+            style={{
+              height: 40,
+              width: 40,
+              borderRadius: 40,
+            }}
             source={
               data.configuration.selectedSchool?.logo
                 ? { uri: data.configuration.selectedSchool?.logo }

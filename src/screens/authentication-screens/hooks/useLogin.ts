@@ -7,7 +7,7 @@ import {
   updateAppUserState,
   userLoginSuccess,
 } from "@safsims/redux/users/actions";
-import { UserTypesEnum, school_id } from "@safsims/utils/constants";
+import { UserTypesEnum } from "@safsims/utils/constants";
 import httpClient from "@safsims/utils/http-client";
 import useLoading from "@safsims/utils/useLoading/useLoading";
 import {
@@ -22,14 +22,20 @@ import { useDispatch } from "react-redux";
 interface IProps {
   username: string;
   password: string;
+
   callback?: () => void;
 }
 
-const useLogin = () => {
+const useLogin = ({ school_id }) => {
   const { loading, startLoading, stopLoading } = useLoading();
   const dispatch = useDispatch();
 
-  const loginUser = async ({ username, password, callback }: IProps) => {
+  const loginUser = async ({
+    username,
+    password,
+
+    callback,
+  }: IProps) => {
     startLoading();
 
     try {
@@ -52,6 +58,15 @@ const useLogin = () => {
       const isDirector = !!roles?.find(
         (item) => item.role?.name === DIRECTOR_ROLE
       );
+      if (!isDirector) {
+        handleError(
+          { status: "403", name: "ApiError" },
+          { code: 401, message: "You dont have access" },
+          true,
+          true
+        );
+        return;
+      }
       dispatch(
         updateAppPrivilegeState({
           isSuperAdmin,
@@ -64,20 +79,21 @@ const useLogin = () => {
         ...ref[item.toLowerCase()],
       }));
       dispatch(setUserTypes(userTypes));
-      dispatch(
-        updateAppUserState({
-          access_token: ums?.access_token,
-        })
-      );
-      await AsyncStorage.setItem("access_token", ums?.access_token || "");
-      await AsyncStorage.setItem("refresh_token", ums?.refresh_token || "");
-      httpClient.defaults.headers.common.Authorization = `Bearer ${ums?.access_token}`;
-
-      const director = userTypes.find(
-        (item) => item.user_type === UserTypesEnum.STAFF
-      );
 
       if (isDirector) {
+        dispatch(
+          updateAppUserState({
+            access_token: ums?.access_token,
+          })
+        );
+
+        await AsyncStorage.setItem("access_token", ums?.access_token || "");
+        await AsyncStorage.setItem("refresh_token", ums?.refresh_token || "");
+        httpClient.defaults.headers.common.Authorization = `Bearer ${ums?.access_token}`;
+
+        const director = userTypes.find(
+          (item) => item.user_type === UserTypesEnum.STAFF
+        );
         dispatch(setActiveUserType(DIRECTOR_ROLE));
         dispatch(userLoginSuccess(director));
         dispatch(setLoginAttempts(0));

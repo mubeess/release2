@@ -1,7 +1,3 @@
-/* istanbul ignore file */
-/* tslint:disable */
-/* eslint-disable */
-// KEEP AWAY FROM GENERATED FOLDER TO PREVENT OVERWRITING
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ApiError } from "@safsims/generated/core/ApiError";
 import type { ApiRequestOptions } from "@safsims/generated/core/ApiRequestOptions";
@@ -9,6 +5,7 @@ import type { ApiResult } from "@safsims/generated/core/ApiResult";
 import type { OnCancel } from "@safsims/generated/core/CancelablePromise";
 import { CancelablePromise } from "@safsims/generated/core/CancelablePromise";
 import type { OpenAPIConfig } from "@safsims/generated/core/OpenAPI";
+import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
 import config from "@safsims/utils/config";
 import { school_id } from "@safsims/utils/constants";
 import type { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
@@ -224,11 +221,13 @@ const sendRequest = async <T>(
   const source = axios.CancelToken.source();
 
   const token = await AsyncStorage.getItem("access_token");
+  const school_id = await AsyncStorage.getItem("school_id");
+
   const requestConfig: AxiosRequestConfig = {
     url,
     headers: {
       ...headers,
-      "X-TENANT-ID": school_id,
+      "X-TENANT-ID": school_id || "",
     },
     data: body ?? formData,
     method: options.method,
@@ -331,7 +330,7 @@ export const request = <T>(
 ): CancelablePromise<T> => {
   return new CancelablePromise(async (resolve, reject, onCancel) => {
     try {
-      config.BASE = "";
+      // config.BASE = "";
       const url = getUrl(config, options);
       const formData = getFormData(options);
       const body = getRequestBody(options);

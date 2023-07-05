@@ -19,7 +19,7 @@ export type OpenAPIConfig = {
 };
 
 export const OpenAPI: OpenAPIConfig = {
-  BASE: "https://api.safsims.flexisafapps-dev.com",
+  BASE: "https://api.safsims.com",
   VERSION: "1.0",
   WITH_CREDENTIALS: false,
   CREDENTIALS: "include",

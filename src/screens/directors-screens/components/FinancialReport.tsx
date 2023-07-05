@@ -25,6 +25,7 @@ import useGetFinancialSummaryDetailsGet from "../hooks/useGetFinancialSummaryDet
 import useGroupTermsBySessions from "@safsims/general-hooks/useGroupTermsBySessions";
 import Loader from "@safsims/components/Loader/Loader";
 import useCurrentTermGet from "@safsims/general-hooks/useCurrentTermGet";
+import { useEffect } from "react";
 
 const { height } = Dimensions.get("window");
 export default function FinancialReport() {

@@ -14,7 +14,8 @@ import { useDispatch } from "react-redux";
 import SchoolItem from "./components/SchoolItem";
 import useAllSchoolsGet from "./hooks/useAllSchoolsGet";
 import { BasicSchoolInformationDto } from "../../generated";
-
+import { setSchoolId } from "../../utils/utils";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function SelectSchoolScreen({ navigation }) {
   const [current, setCurr] = useState<BasicSchoolInformationDto | undefined>(
     undefined
@@ -84,12 +85,14 @@ export default function SelectSchoolScreen({ navigation }) {
           />
         )}
         <Button
-          onPress={() => {
+          onPress={async () => {
             dispatch(
               updateAppConfigState({
                 selectedSchool: current,
               })
             );
+            await AsyncStorage.setItem("school_id", current?.school_id!);
+            setSchoolId(current?.school_id!);
             navigation.navigate("Login");
           }}
           disabled={!current}

@@ -75,6 +75,13 @@ const AvatarMenu = () => {
   return (
     <>
       <TouchableOpacity
+        style={{
+          width: 30,
+          height: 30,
+          borderRadius: 30,
+          borderColor: lightTheme.colors.PrimaryBorderColor,
+          borderWidth: 1,
+        }}
         // @ts-ignore
         ref={ref}
         onPress={handleModal}

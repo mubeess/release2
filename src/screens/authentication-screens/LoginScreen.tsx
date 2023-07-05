@@ -1,5 +1,5 @@
 import { useTheme } from "@react-navigation/native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import AuthLayout from "./components/AuthLayout";
 import useLogin from "./hooks/useLogin";
@@ -8,12 +8,19 @@ import Button from "../../components/Button/Button";
 import Icon from "../../components/Icon/Icon";
 import { lightTheme } from "../../utils/Theme";
 import useCurrentTermGet from "@safsims/general-hooks/useCurrentTermGet";
+import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
 
 const LoginScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const [values, setValues] = useState({ username: "", password: "" });
-  const { loginUser, loading } = useLogin();
-  
+  const school_id = useAppSelector(
+    (data) => data.configuration.selectedSchool?.school_id
+  );
+  const { loginUser, loading } = useLogin({ school_id });
+
+  useEffect(() => {
+    console.log(school_id);
+  }, []);
   const onSubmit = () => {
     const { username, password } = values;
     if (username && password) {

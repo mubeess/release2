@@ -10,4 +10,4 @@ const config = {
   },
 };
 
-export default config['production'];
+export default config["production"];
