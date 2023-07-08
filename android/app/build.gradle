@@ -69,7 +69,9 @@ react {
 
 // Override `hermesEnabled` by `expo.jsEngine`
 ext {
-  hermesEnabled = (findProperty('expo.jsEngine') ?: "hermes") == "hermes"
+    enableHermes = false
+  hermesEnabled = false
+//   (findProperty('expo.jsEngine') ?: "hermes") == "hermes"
 }
 
 /**
@@ -201,7 +203,7 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-
+    implementation("androidx.core:core-splashscreen:1.0.0")
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true";
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true";
     def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true";
@@ -234,7 +236,7 @@ dependencies {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
     }
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
-
+  
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {

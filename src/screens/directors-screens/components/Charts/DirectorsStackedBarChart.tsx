@@ -36,14 +36,6 @@ export default function DirectorsStackedBarChart({
   return (
     <View>
       <View style={styles.label}>
-        <TouchableOpacity
-          onPress={() => {
-            console.log(numberOfPayed);
-          }}
-        >
-          <Text>sips</Text>
-        </TouchableOpacity>
-        <Text>Grade class</Text>
         <View style={styles.mainLabel}>
           <Text>Paid</Text>
           <View style={styles.color} />

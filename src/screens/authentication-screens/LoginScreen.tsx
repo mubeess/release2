@@ -18,9 +18,7 @@ const LoginScreen = ({ navigation }) => {
   );
   const { loginUser, loading } = useLogin({ school_id });
 
-  useEffect(() => {
-    console.log(school_id);
-  }, []);
+ 
   const onSubmit = () => {
     const { username, password } = values;
     if (username && password) {

@@ -31,6 +31,7 @@
     "expo": "~48.0.18",
     "expo-checkbox": "^2.3.1",
     "expo-image-picker": "~14.1.1",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.0",
     "formik": "^2.2.9",
     "intl": "^1.2.5",
@@ -39,6 +40,7 @@
     "polished": "^4.2.2",
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-bootsplash": "^4.7.5",
     "react-native-chart-kit": "^6.12.0",
     "react-native-charts-wrapper": "^0.5.11",
     "react-native-format-currency": "^0.0.3",
@@ -66,10 +68,10 @@
     "redux-saga": "^1.2.1",
     "use-debounce": "^9.0.3",
     "yarn": "^1.22.19",
-    "yup": "^1.0.2",
-    "expo-splash-screen": "~0.18.2"
+    "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.0",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
@@ -90,8 +92,7 @@
     "lint-staged": "^13.0.3",
     "openapi-typescript-codegen": "^0.23.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.9.4",
-    "@babel/core": "^7.20.0"
+    "typescript": "^4.9.4"
   },
   "private": true
 }

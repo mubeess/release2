@@ -1,7 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 // import { useAppSelector } from '@safsims/redux/hooks/useAppSelector';
 // import { updateAppUserState } from '@safsims/redux/users/actions';
-
+import RNBootSplash from "react-native-bootsplash";
 import { useCallback, useEffect } from "react";
 import { Appearance, ColorSchemeName } from "react-native";
 import "react-native-gesture-handler";
@@ -50,6 +50,7 @@ const AppNavigationContainer = () => {
   return (
     <>
       <NavigationContainer
+        onReady={() => RNBootSplash.hide()}
         // @ts-ignore
         theme={theme === "dark" ? darkTheme : lightTheme}
       >

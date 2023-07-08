@@ -210,6 +210,7 @@ function userReducer(state: IAppUserState = INITIAL_STATE, { type, payload }: ac
         refresh_token: null,
         userTypeModal: false,
         isRefreshingToken: false,
+       
       };
     case userActionTypes.SWITCH_USER_TYPE:
       return {
