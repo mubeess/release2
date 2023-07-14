@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Safsims.app"
-               BlueprintName = "Safsims"
-               ReferencedContainer = "container:Safsims.xcodeproj">
+               BuildableName = "Safsimss.app"
+               BlueprintName = "Safsimss"
+               ReferencedContainer = "container:Safsimss.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "SafsimsTests.xctest"
-               BlueprintName = "SafsimsTests"
-               ReferencedContainer = "container:Safsims.xcodeproj">
+               BuildableName = "SafsimssTests.xctest"
+               BlueprintName = "SafsimssTests"
+               ReferencedContainer = "container:Safsimss.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Safsims.app"
-            BlueprintName = "Safsims"
-            ReferencedContainer = "container:Safsims.xcodeproj">
+            BuildableName = "Safsimss.app"
+            BlueprintName = "Safsimss"
+            ReferencedContainer = "container:Safsimss.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Safsims.app"
-            BlueprintName = "Safsims"
-            ReferencedContainer = "container:Safsims.xcodeproj">
+            BuildableName = "Safsimss.app"
+            BlueprintName = "Safsimss"
+            ReferencedContainer = "container:Safsimss.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
