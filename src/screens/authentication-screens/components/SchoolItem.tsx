@@ -50,7 +50,7 @@ export default function SchoolItem({
           style={[styles.logo, { borderColor: colors.PrimaryBorderColor }]}
           resizeMode="contain"
         />
-        <View>
+        <View style={{width:'80%'}}>
           <Text h3>{name}</Text>
           <Text>{slogan}</Text>
         </View>
@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
   schoolDetail: {
     flexDirection: 'row',
     alignItems: 'center',
+    width:'80%'
   },
   selected: {
     height: 24,

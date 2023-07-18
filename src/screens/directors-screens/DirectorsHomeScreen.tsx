@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    width: 100,
+    width: 120,
     marginRight: 20,
     marginLeft: 0,
     borderWidth: 1,

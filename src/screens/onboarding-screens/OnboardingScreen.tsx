@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   imagesContainer: {
-    height: height * 0.7,
+    height: height * 0.6,
     backgroundColor: lightTheme.colors.PrimaryColor,
     justifyContent: 'center',
     alignItems: 'center',

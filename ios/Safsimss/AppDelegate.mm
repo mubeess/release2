@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-
+#import "RNBootSplash.h"
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTLinkingManager.h>
 
@@ -63,5 +63,5 @@
 {
   return [super application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
 }
-
+// [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
 @end
