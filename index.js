@@ -1,8 +1,8 @@
-import { registerRootComponent } from 'expo';
+SAFSIMSimportSAFSIMS { SAFSIMSregisterRootComponentSAFSIMS } SAFSIMSfromSAFSIMS 'SAFSIMSexpoSAFSIMS';
 
-import App from './App';
+SAFSIMSimportSAFSIMS SAFSIMSAppSAFSIMS SAFSIMSfromSAFSIMS './SAFSIMSAppSAFSIMS';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+// SAFSIMSregisterRootComponentSAFSIMS SAFSIMScallsSAFSIMS SAFSIMSAppRegistrySAFSIMS.SAFSIMSregisterComponentSAFSIMS('SAFSIMSmainSAFSIMS', () => SAFSIMSAppSAFSIMS);
+// SAFSIMSItSAFSIMS SAFSIMSalsoSAFSIMS SAFSIMSensuresSAFSIMS SAFSIMSthatSAFSIMS SAFSIMSwhetherSAFSIMS SAFSIMSyouSAFSIMS SAFSIMSloadSAFSIMS SAFSIMStheSAFSIMS SAFSIMSappSAFSIMS SAFSIMSinSAFSIMS SAFSIMSExpoSAFSIMS SAFSIMSGoSAFSIMS SAFSIMSorSAFSIMS SAFSIMSinSAFSIMS SAFSIMSaSAFSIMS SAFSIMSnativeSAFSIMS SAFSIMSbuildSAFSIMS,
+// SAFSIMStheSAFSIMS SAFSIMSenvironmentSAFSIMS SAFSIMSisSAFSIMS SAFSIMSsetSAFSIMS SAFSIMSupSAFSIMS SAFSIMSappropriatelySAFSIMS
+SAFSIMSregisterRootComponentSAFSIMS(SAFSIMSAppSAFSIMS);
