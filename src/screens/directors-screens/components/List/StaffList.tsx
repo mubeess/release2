@@ -60,10 +60,12 @@ export default function StaffList({
     >
       <View style={[styles.head]}>
         <View style={styles.avatar}>
+          <View style={styles.staffImage}>
           <Image
             style={styles.image}
-            source={require("../../../../../assets/sample.png")}
+            source={{uri:data.profile_pic}}
           />
+          </View>
           <View style={styles.name}>
             <Text h3>
               {data.first_name} {data.surname}
@@ -81,6 +83,7 @@ export default function StaffList({
         <TouchableOpacity
           style={styles.iconContainer}
           onPress={() => {
+            
             heightValue.value == 0
               ? (heightValue.value = withTiming(height + height, {
                   duration: 500,
@@ -230,4 +233,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  staffImage:{
+    height: 40,
+    width: 40,
+    borderRadius:40,
+    borderWidth:1,
+    borderColor:lightTheme.colors.PrimaryBorderColor
+  }
 });

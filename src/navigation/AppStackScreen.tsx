@@ -1,7 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { useAppSelector } from '../redux/hooks/useAppSelector';
-import LoginScreen from '../screens/authentication-screens/LoginScreen';
+
 import DirectorStackScreens from './director-stack-navigation/DirectorStackNavigation';
+import FormTeacherTabNavigation from './form-teacher-tab-navigation/FormTeacherTabNavigation';
 // import { useAppSelector } from '@safsims/redux/hooks/useAppSelector';
 // import LoginScreen from '@safsims/screens/authentication-screens/LoginScreen';
 
@@ -13,9 +14,10 @@ const AppStackScreens = () => {
 
   return (
     <AppStack.Navigator
-      initialRouteName='Director'
+      initialRouteName='FormTeacher'
       screenOptions={{ headerShown: false }}
     >
+      <AppStack.Screen name="FormTeacher" component={FormTeacherTabNavigation} />
       <AppStack.Screen name="Director" component={DirectorStackScreens} />
     </AppStack.Navigator>
   );
