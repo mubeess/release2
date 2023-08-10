@@ -70,6 +70,7 @@ function Input({
       <AnimatedTouchableOpacity style={[styles.inputContainer, reanimtedBorderStyle]}>
         {IconLeft && IconLeft}
         <TextInput
+         placeholderTextColor={lightTheme.colors.PrimaryGrey}
           value={`${value || ''}`}
           keyboardType={type}
           onChangeText={onChange}
@@ -124,6 +125,8 @@ const styles = StyleSheet.create({
     width: '90%',
     backgroundColor: '#fff',
     height: 40,
+   
+
   },
 });
 

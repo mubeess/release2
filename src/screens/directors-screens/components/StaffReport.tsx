@@ -1,6 +1,5 @@
 import {
   Dimensions,
-  ScrollView,
   StyleSheet,
   TouchableOpacity,
   View,
@@ -11,47 +10,30 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
-import * as shape from "d3-shape";
+
 import Text from "../../../components/Text/Text";
 import { lightTheme } from "../../../utils/Theme";
 import Icon from "../../../components/Icon/Icon";
-import MenuItem from "./MenuItem";
-import {
-  LineChart,
-  Grid,
-  AreaChart,
-  XAxis,
-  YAxis,
-} from "react-native-svg-charts";
+
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
-  ExpectedRevenueIcon,
-  GeneratedRevenueIcon,
-  OutstandingRevenueIcon,
 } from "../../../components/Images";
-import { Circle, Path } from "react-native-svg";
-import InteractiveAreaChart from "./Charts/DirectorsLineChart";
-import DirectorsLineChart from "./Charts/DirectorsLineChart";
-import DirectorsStackedBarChart from "./Charts/DirectorsStackedBarChart";
+
 import Button from "../../../components/Button/Button";
 import StatCard from "./StatCard";
 import Input from "../../../components/Input/Input";
 import StaffList from "./List/StaffList";
 import useGetStaffReportGet from "../hooks/useGetStaffReportGet";
-import { useEffect } from "react";
-import InfiniteScrollView from "@safsims/components/InfiniteScrollView/InfiniteScrollView";
+
 import useGetAllStaffGet from "../hooks/useGetAllStaffGet";
-import { StaffDto } from "@safsims/generated";
+
 import Loader from "@safsims/components/Loader/Loader";
-const data = [
-  -70, -50, 60, 70, 50, 10, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50,
-  -20, -80, 30,
-];
+
 
 const { height } = Dimensions.get("window");
 export default function StaffReport() {
-  const { loadingStaffSummary, summary } = useGetStaffReportGet();
+  const {  summary } = useGetStaffReportGet();
   const {
     loadingPageStaff,
     pageStaff,
