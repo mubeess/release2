@@ -1,6 +1,6 @@
 import { useTheme } from "@react-navigation/native";
 import { useAppSelector } from "../../redux/hooks/useAppSelector";
-import { logoutUser } from "../../redux/users/actions";
+import { logoutUser, setActiveUserType } from "../../redux/users/actions";
 import { useEffect, useRef, useState } from "react";
 import {
   Image,
@@ -14,6 +14,7 @@ import { Colors } from "react-native-ui-lib";
 import { useDispatch } from "react-redux";
 import Icon from "../Icon/Icon";
 import { lightTheme } from "../../utils/Theme";
+import { ADMIN_ROLE, DIRECTOR_ROLE } from "@safsims/utils/utils";
 
 interface IMenuItemProps {
   icon: string;
@@ -122,7 +123,24 @@ const AvatarMenu = () => {
                 { borderColor: colors.PrimaryBorderColor },
               ]}
             >
-              <MenuItem title="Switch to Staff" icon="repeat" bottomBorder />
+              {data.privileges.isDirector == true ? (
+                <MenuItem
+                  onClick={() => {
+                    if (data.user.activeUserType == DIRECTOR_ROLE) {
+                      dispatch(setActiveUserType(ADMIN_ROLE));
+                    } else {
+                      dispatch(setActiveUserType(DIRECTOR_ROLE));
+                    }
+                  }}
+                  title={`Switch to ${
+                    data.user.activeUserType == DIRECTOR_ROLE
+                      ? "Staff"
+                      : "Director"
+                  }`}
+                  icon="repeat"
+                  bottomBorder
+                />
+              ) : null}
 
               <MenuItem
                 onClick={() => dispatch(logoutUser())}

@@ -61,16 +61,18 @@ const AppHeader = ({ onBack, navigation, pageTitle }: IProps) => {
           />
         </View>
 
-      <View>
-      <Text style={styles.schoolName}>{data.configuration.selectedSchool?.school_name}</Text>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <Icon name="calendar" size={20} />
-          <Text style={{ fontWeight: "500", fontSize: 16, marginLeft: 5 }}>
-            {pageTitle ||
-              `${selectedTerm?.value?.school_term_definition?.name} / ${selectedTerm?.value?.session?.name}`}
+        <View>
+          <Text style={styles.schoolName}>
+            {data.configuration.selectedSchool?.school_name}
           </Text>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Icon name="calendar" size={20} />
+            <Text style={{ fontWeight: "500", fontSize: 12, marginLeft: 5 }}>
+              {pageTitle ||
+                `${selectedTerm?.value?.school_term_definition?.name} / ${selectedTerm?.value?.session?.name}`}
+            </Text>
+          </View>
         </View>
-      </View>
 
         <AvatarMenu />
       </View>
@@ -98,10 +100,10 @@ const styles = StyleSheet.create({
     left: 0,
     borderRightWidth: 1,
   },
-  schoolName:{
-    fontSize:8,
-    textAlign:'center',
-    marginBottom:10,
-    fontWeight:'bold'
-  }
+  schoolName: {
+    fontSize: 8,
+    textAlign: "center",
+    marginBottom: 10,
+    fontWeight: "bold",
+  },
 });

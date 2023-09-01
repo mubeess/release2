@@ -1,6 +1,6 @@
-import { useTheme } from '@react-navigation/native';
-import { lightTheme } from '@safsims/utils/Theme';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useTheme } from "@react-navigation/native";
+import { lightTheme } from "@safsims/utils/Theme";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   FlatList,
   Modal,
@@ -11,17 +11,18 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-} from 'react-native';
+} from "react-native";
 import Animated, {
   interpolateColor,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
-} from 'react-native-reanimated';
-import { Colors } from 'react-native-ui-lib';
-import Icon from '../Icon/Icon';
+} from "react-native-reanimated";
+import { Colors } from "react-native-ui-lib";
+import Icon from "../Icon/Icon";
 
-const AnimatedTouchableOpacity = Animated.createAnimatedComponent(TouchableOpacity);
+const AnimatedTouchableOpacity =
+  Animated.createAnimatedComponent(TouchableOpacity);
 
 export interface ISelectOptionType {
   label: string;
@@ -65,7 +66,7 @@ const Select = ({
     const borderColor = interpolateColor(
       borderWidthValue.value,
       [1, 2],
-      [lightTheme.colors.PrimaryBorderColor, lightTheme.colors.SafsimsBlue],
+      [lightTheme.colors.PrimaryBorderColor, lightTheme.colors.SafsimsBlue]
     );
     return {
       borderWidth: borderWidthValue.value,
@@ -74,22 +75,25 @@ const Select = ({
   });
 
   const [selectedValue, setSelectedValue] = useState(value);
-  const [inputVal, setInputVal] = useState<string>(inputValue || '');
+  const [inputVal, setInputVal] = useState<string>(inputValue || "");
   const [top, setTop] = useState(0);
   const [visible, setVisible] = useState<boolean>(false);
-  const [menuWidth, setMenuWidth] = useState<any>('90%');
+  const [menuWidth, setMenuWidth] = useState<any>("90%");
   const ref = useRef();
   const inputRef = useRef();
 
   const filteredOptions = useMemo(
-    () => options.filter((item) => item.label.toLowerCase().includes(inputVal.toLowerCase())),
-    [options, inputVal],
+    () =>
+      options.filter((item) =>
+        item.label.toLowerCase().includes(inputVal.toLowerCase())
+      ),
+    [options, inputVal]
   );
 
   useEffect(() => {
     setSelectedValue(value);
-    setInputVal(value?.label || '');
-    setInputValue?.(value?.label || '');
+    setInputVal(value?.label || "");
+    setInputValue?.(value?.label || "");
   }, [value]);
 
   const handleModal = (focus?: boolean) => {
@@ -106,8 +110,8 @@ const Select = ({
 
   const onClose = () => {
     if (!selectedValue) {
-      setInputVal('');
-      setInputValue?.('');
+      setInputVal("");
+      setInputValue?.("");
     } else {
       setInputVal(selectedValue?.label);
       setInputValue?.(selectedValue?.label);
@@ -130,7 +134,7 @@ const Select = ({
   return (
     <View style={style}>
       <View style={styles.labelContainer}>
-        <View style={{ flexDirection: 'row' }}>
+        <View style={{ flexDirection: "row" }}>
           {label && <Text style={styles.label}>{label}</Text>}
           {required && <Text style={styles.required}>*</Text>}
         </View>
@@ -150,7 +154,9 @@ const Select = ({
         }}
       >
         <Text style={[styles.input]}>
-          {inputVal || <Text style={{ color: colors.PrimaryGrey }}> {placeholder} </Text>}
+          {inputVal || (
+            <Text style={{ color: colors.PrimaryGrey }}> {placeholder} </Text>
+          )}
         </Text>
         <Pressable
           onPress={() => {
@@ -159,7 +165,7 @@ const Select = ({
             }
           }}
         >
-          <Icon name="chevron-down" size={18} color="#000" />
+          <Icon name="arrow-down-1" size={18} color="#000" />
         </Pressable>
       </AnimatedTouchableOpacity>
 
@@ -198,15 +204,23 @@ const Select = ({
                       }}
                     />
                     <Pressable>
-                      <Icon name="chevron-down" size={18} color="#000" />
+                      <Icon name="arrow-down-1" size={18} color="#000" />
                     </Pressable>
                   </View>
                 )}
-                <View style={[styles.triangle, { borderBottomColor: colors.PrimaryBorderColor }]} />
+                <View
+                  style={[
+                    styles.triangle,
+                    { borderBottomColor: colors.PrimaryBorderColor },
+                  ]}
+                />
                 <View
                   style={[
                     styles.optionsContainer,
-                    { borderColor: colors.PrimaryBorderColor, width: menuWidth },
+                    {
+                      borderColor: colors.PrimaryBorderColor,
+                      width: menuWidth,
+                    },
                   ]}
                 >
                   {
@@ -214,7 +228,10 @@ const Select = ({
                       data={isSearchable ? filteredOptions : options}
                       renderItem={({ item: data }) => (
                         <TouchableOpacity
-                          style={[styles.options, { borderColor: colors.PrimaryBorderColor }]}
+                          style={[
+                            styles.options,
+                            { borderColor: colors.PrimaryBorderColor },
+                          ]}
                           onPress={() => {
                             onChange?.(data);
                             setSelectedValue(data);
@@ -244,75 +261,75 @@ export default Select;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    width: '100%',
+    width: "100%",
     borderWidth: 1,
     borderRadius: 3,
     paddingHorizontal: 15,
     paddingVertical: 10,
     height: 48,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
   input: {
-    width: '90%',
+    width: "90%",
   },
   triangle: {
     width: 0,
     height: 0,
     borderLeftWidth: 0.2,
-    borderLeftColor: 'transparent',
+    borderLeftColor: "transparent",
     borderRightWidth: 0.2,
-    borderRightColor: 'transparent',
+    borderRightColor: "transparent",
     borderBottomWidth: 0.2,
   },
   optionsContainer: {
-    width: '90%',
-    backgroundColor: '#FFFFFF',
+    width: "90%",
+    backgroundColor: "#FFFFFF",
     borderRadius: 5,
     borderWidth: 1,
     maxHeight: 200,
-    overflow: 'scroll',
+    overflow: "scroll",
   },
   options: {
-    flexDirection: 'row',
-    width: '100%',
+    flexDirection: "row",
+    width: "100%",
     paddingVertical: 12,
     paddingHorizontal: 10,
-    alignItems: 'center',
+    alignItems: "center",
     borderBottomWidth: 0.5,
   },
   optionsMenu: {
-    width: '100%',
-    flexDirection: 'column',
-    alignItems: 'center',
-    position: 'absolute',
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "center",
+    position: "absolute",
     zIndex: 100,
-    shadowColor: 'gray',
+    shadowColor: "gray",
     shadowOffset: { width: 1, height: 5 },
     shadowOpacity: 0.2,
   },
   overlay: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
   },
   labelContainer: {
-    flexDirection: 'column',
+    flexDirection: "column",
     marginBottom: 10,
-    alignItems: 'flex-start',
-    width: '100%',
+    alignItems: "flex-start",
+    width: "100%",
   },
   required: {
-    color: 'red',
-    fontWeight: 'bold',
+    color: "red",
+    fontWeight: "bold",
   },
   label: {
     fontSize: 14,
-    fontWeight: '500',
-    textTransform: 'uppercase',
+    fontWeight: "500",
+    textTransform: "uppercase",
   },
   subLabel: {
     fontSize: 12,
-    fontWeight: '400',
+    fontWeight: "400",
   },
 });

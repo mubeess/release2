@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import usePaginationWrapper from './usePaginationWrapper';
-import { StudentDto, StudentRestControllerService } from '../generated';
-import useLoading from '../utils/useLoading/useLoading';
-import { apiWrapper } from '../utils/http-client';
-import { handleError } from '../utils/utils';
+import { useEffect, useState } from "react";
+import usePaginationWrapper from "./usePaginationWrapper";
+import { StudentDto, StudentRestControllerService } from "../generated";
+import useLoading from "../utils/useLoading/useLoading";
+import { apiWrapper } from "../utils/http-client";
+import { handleError } from "../utils/utils";
 
 const useAllStudentsGet = () => {
   const [students, setStudents] = useState<StudentDto[]>([]);
@@ -26,6 +26,7 @@ const useAllStudentsGet = () => {
     debouncedSearchText,
     searchText,
     setSearchText,
+    infiniteScrollCallback,
   } = usePaginationWrapper();
 
   const fetchStudents = async () => {
@@ -35,8 +36,8 @@ const useAllStudentsGet = () => {
         StudentRestControllerService.getAllStudentsUsingGet1({
           limit,
           offset,
-          search: debouncedSearchText,
-        }),
+          search: searchText,
+        })
       );
       setStudents(data?.content || []);
       setPageable(data);
@@ -50,7 +51,7 @@ const useAllStudentsGet = () => {
   useEffect(() => {
     fetchStudents();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [offset, limit]);
+  }, [offset, limit, debouncedSearchText]);
 
   return {
     students,
@@ -70,6 +71,7 @@ const useAllStudentsGet = () => {
     pageOptions,
     setSearchText,
     searchText,
+    infiniteScrollCallback,
   };
 };
 

@@ -10,6 +10,7 @@ import httpClient from "./http-client";
 export const ONBOARDING_ROLE = "ONBOARDING_ROLE";
 export const DIRECTOR_ROLE = "DIRECTOR";
 export const ADMIN_ROLE = "Admin";
+export const FORM_TEACHER_ROLE = "FORM_TEACHER";
 
 export const InsertBeginning = (originalArray, objectToInsert) => {
   return [objectToInsert, ...originalArray];

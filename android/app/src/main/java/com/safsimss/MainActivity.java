@@ -1,4 +1,4 @@
-package com.safsimss;
+package com.safsims;
 
 import android.os.Build;
 import android.os.Bundle;

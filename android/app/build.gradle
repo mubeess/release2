@@ -115,9 +115,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.safsimss"
+    namespace "com.safsims"
     defaultConfig {
-        applicationId "com.safsimss"
+        applicationId "com.safsims"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -20,7 +20,8 @@ export const NotFoundImage = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width={197.9}
     height={91.3}
-    {...props}>
+    {...props}
+  >
     <Defs></Defs>
     <G filter="url(#a)">
       <Path
@@ -166,7 +167,8 @@ export const Achievement1 = (props) => (
     height={425}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}>
+    {...props}
+  >
     <Path
       d="m276.722 394.939-.593.262a.36.36 0 0 0-.032-.104c.221-.159.385-.355.441-.581l.184.423ZM114.636 217.653a9.87 9.87 0 0 1-2.336-.34c.627.289 1.403.419 2.336.34Zm127.773 103.926c-6.576-12.996-11.935-26.176-15.369-40.372-3.3-13.643-10.377-26.533-12.256-40.474a52.02 52.02 0 0 1-1.81.699 33.46 33.46 0 0 1-5.102 1.432l-.151.076-.14-.028c-6.984 1.265-13.463-.36-18.453-6.823-5.055-6.547-7.736-14.032-9.086-21.933l-.065-.002c-.446.321-1.225.655-1.635.673-11.421.513-22.571-1.189-32.386-7.285-4.264 1.495-8.518 2.975-12.724 4.486a782.67 782.67 0 0 1-10.308 3.648c-3.385 1.163-6.466 3.002-10.094 3.372-3.315.338-6.712-2.25-5.464-5.956 1.032-3.064 3.218-5.313 6.161-6.46-.216-.079-.116-.263.136-.471a.282.282 0 0 1-.057-.167c.017-1.559.164-3.083.425-4.558l-.03.002c-15.52-.055-48.079-5.342-51.997 16.293-2.678 14.787 2.842 31.383 7.775 45.16 3.095 8.644 6.584 17.153 9.845 25.741l1.347 3.056 1.1 3.557c1.477 4.119 2.872 8.267 4.099 12.472.014.048.015.093.021.139a.662.662 0 0 1 .322.198c3.562 4.271 12.039 3.526 16.971 3.243 3.047-.175 6.099-.47 9.11-.975 1.24-.208 2.488-.414 3.704-.741.443-.119.678-.185.799-.211a.806.806 0 0 1 .208-.277c-.013-.031-.032-.059-.042-.093-6.85-22.215-15.687-43.829-20.143-66.724-.148-.762.559-1.202 1.172-1.42 9.467-3.364 21.822-.625 31.318 1.179 9.979 1.896 20.728 3.944 29.941 8.399.012.006.019.012.03.018.35-.085.664-.12.835-.062 6.973 2.357 12.036 8.739 16.195 14.524 4.639 6.452 9.195 13.295 13.111 20.215 3.257 5.756 5.141 12.061 7.335 18.239l12.489 25.728c7.219 13.623 14.469 27.233 21.432 40.99 2.774 5.48 5.545 10.972 8.084 16.567 1.201 2.647 2.828 5.584 3.344 8.517a15.396 15.396 0 0 0 2.396 1.522l3.2 1.344c3.69 1.237 8.075 1.797 12.264 1.612l4.916-.593c3.378-.696 6.334-1.978 8.269-3.9.066-.065.15-.122.241-.173-.031-.049-.063-.098-.085-.155-9.607-24.685-19.227-49.59-31.198-73.248ZM102.073 242.05l5.476-.566c-1.876.041-3.712.215-5.476.566Zm-1.85.445c3.137 15.646 8.273 30.708 13.385 45.782l-9.386-33.087-3.458-12.845c-.182.046-.361.099-.541.15Zm118.175-80.272-1.732.204c-10.16 4.557-24.705 4.558-34.076 6.972-.122 10.964-1.153 21.923-.567 32.89.618 11.585 2.514 24.728 10.632 33.679 7.159 7.895 14.658 6.033 22.413 2.843.333-.292.808-.481 1.258-.526 2.891-1.229 5.816-2.578 8.773-3.617 5.556-1.953 11.272-2.38 16.905-1.241-1.722-2.471-3.149-5.357-4.602-7.794-4.294-7.207-8.357-14.6-11.716-22.293-3.352-7.678-6.405-15.759-6.658-24.225-.16-5.342-1.069-11.397-.63-16.892ZM110.69 177.531c5.62 12.411 22.53 7.129 32.428 4.06 10.85-3.365 21.28-7.809 31.891-11.829a54.27 54.27 0 0 1 5.708-1.792c.241-.09.498-.154.745-.187 4.762-1.169 9.585-1.799 14.454-2.454 2.514-.338 5.039-.684 7.575-1.117a52.613 52.613 0 0 0 3.274-.666c10.6-2.52 20.761-8.673 18.313-21.414-1.933-10.063-9.398-20.572-19.872-22.883a1.57 1.57 0 0 1-.593-.249c-6.358 2.731-12.955 4.833-19.428 7.269-.13.121-.309.235-.552.335-18.41 7.546-35.917 16.897-53.087 26.88-7.45 4.331-26.07 12.533-20.856 24.047Zm-40.706-15.106c2.998 2.714 6.51 3.534 10.205 3.155a51.319 51.319 0 0 0 2.53-.434c9.504-2.257 19.714-11.271 25.348-16.263 4.161-3.686 8.214-7.538 11.912-11.693.417-.469-4.746-9.094-5.209-10.129-.943-2.108-1.923-4.233-2.677-6.42-11.812 3.123-24.106 5.949-34.776 12.079-5 2.873-10.678 6.902-12.33 12.773-1.601 5.694.581 12.934 4.997 16.932Z"
       fill="#fff"
@@ -184,7 +186,8 @@ export const Achievement2 = (props) => (
     height={425}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    {...props}>
+    {...props}
+  >
     <Path
       d="m276.594 394.793-.593.262a.36.36 0 0 0-.032-.104c.221-.159.385-.355.441-.581l.184.423ZM114.508 217.508a9.872 9.872 0 0 1-2.336-.341c.627.289 1.403.42 2.336.341Zm127.773 103.926c-6.576-12.996-11.935-26.177-15.369-40.373-3.3-13.643-10.377-26.533-12.256-40.474a52.02 52.02 0 0 1-1.81.699 33.465 33.465 0 0 1-5.102 1.433l-.151.075-.14-.028c-6.984 1.265-13.463-.36-18.453-6.823-5.055-6.547-7.736-14.032-9.086-21.933l-.065-.002c-.446.321-1.224.655-1.634.673-11.421.513-22.572-1.189-32.387-7.285-4.264 1.495-8.518 2.976-12.724 4.487a782.487 782.487 0 0 1-10.307 3.647c-3.385 1.163-6.467 3.002-10.095 3.372-3.315.338-6.712-2.249-5.464-5.955 1.032-3.064 3.218-5.314 6.161-6.461-.216-.079-.116-.262.136-.47a.286.286 0 0 1-.057-.168c.017-1.559.164-3.083.425-4.558l-.03.002c-15.52-.055-48.079-5.342-51.997 16.293-2.677 14.787 2.843 31.383 7.776 45.16 3.094 8.644 6.584 17.153 9.844 25.741l1.348 3.056 1.1 3.557c1.477 4.119 2.871 8.268 4.099 12.473.013.048.014.092.02.138a.662.662 0 0 1 .322.198c3.563 4.271 12.04 3.526 16.971 3.243 3.047-.175 6.099-.47 9.11-.975 1.24-.208 2.488-.414 3.704-.741.443-.119.678-.185.799-.211a.806.806 0 0 1 .208-.277c-.013-.031-.032-.059-.042-.093-6.85-22.215-15.687-43.829-20.142-66.724-.148-.762.559-1.202 1.172-1.42 9.466-3.364 21.821-.625 31.317 1.179 9.979 1.896 20.728 3.944 29.941 8.399.012.006.019.012.03.018.35-.085.664-.119.835-.061 6.973 2.357 12.036 8.738 16.195 14.523 4.639 6.452 9.195 13.295 13.111 20.215 3.257 5.756 5.141 12.062 7.335 18.24l12.489 25.728c7.219 13.623 14.469 27.232 21.432 40.989 2.774 5.48 5.545 10.973 8.084 16.568 1.201 2.647 2.828 5.584 3.344 8.517a15.393 15.393 0 0 0 2.396 1.521l3.2 1.345c3.69 1.237 8.075 1.797 12.264 1.612l4.916-.594c3.378-.696 6.334-1.978 8.269-3.9.066-.065.15-.122.241-.173-.031-.049-.063-.098-.085-.155-9.607-24.685-19.227-49.589-31.198-73.247Zm-140.336-79.53 5.476-.565c-1.876.041-3.712.214-5.476.565Zm-1.85.445c3.137 15.646 8.273 30.708 13.385 45.783l-9.386-33.088-3.458-12.845c-.182.046-.361.099-.541.15Zm118.175-80.272-1.732.204c-10.16 4.557-24.705 4.558-34.076 6.972-.122 10.964-1.152 21.923-.566 32.89.618 11.585 2.513 24.728 10.631 33.679 7.159 7.895 14.658 6.033 22.413 2.843.333-.292.808-.481 1.258-.526 2.891-1.229 5.816-2.578 8.773-3.617 5.556-1.953 11.272-2.38 16.905-1.241-1.722-2.471-3.149-5.357-4.602-7.794-4.294-7.207-8.357-14.6-11.716-22.293-3.352-7.678-6.405-15.759-6.658-24.225-.16-5.342-1.069-11.397-.63-16.892Zm-107.708 15.308c5.62 12.411 22.531 7.129 32.429 4.06 10.85-3.365 21.279-7.809 31.89-11.829a54.286 54.286 0 0 1 5.709-1.792c.241-.09.497-.154.744-.187 4.762-1.169 9.585-1.799 14.454-2.454 2.514-.338 5.039-.684 7.575-1.117a52.613 52.613 0 0 0 3.274-.666c10.6-2.52 20.761-8.673 18.313-21.414-1.933-10.063-9.398-20.572-19.872-22.883a1.57 1.57 0 0 1-.593-.249c-6.358 2.731-12.955 4.833-19.428 7.269-.13.121-.309.235-.552.335-18.41 7.546-35.917 16.897-53.087 26.88-7.45 4.331-26.07 12.533-20.856 24.047Zm-40.706-15.106c2.999 2.714 6.51 3.534 10.206 3.155a51.319 51.319 0 0 0 2.53-.434c9.504-2.257 19.713-11.271 25.347-16.263 4.161-3.686 8.214-7.538 11.912-11.693.417-.469-4.746-9.094-5.209-10.129-.943-2.108-1.923-4.233-2.677-6.42-11.812 3.123-24.106 5.949-34.776 12.079-5 2.873-10.677 6.902-12.33 12.773-1.6 5.694.582 12.934 4.998 16.932Z"
       fill="#ECECEC"
@@ -205,7 +208,8 @@ export const AltLogin = (props) => (
         y1={-0.824}
         x2={0.44}
         y2={-1.678}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#2e33a0" />
         <Stop offset={1} stopColor="#0665a5" />
       </LinearGradient>
@@ -216,7 +220,8 @@ export const AltLogin = (props) => (
         y1={13.118}
         x2={1.695}
         y2={11.624}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#313131" />
         <Stop offset={1} stopColor="#365e8b" />
       </LinearGradient>
@@ -226,7 +231,8 @@ export const AltLogin = (props) => (
         y1={-0.237}
         x2={0.348}
         y2={-1.255}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#1852a0" />
         <Stop offset={1} stopColor="#067ed3" />
       </LinearGradient>
@@ -236,7 +242,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#836ceb" />
         <Stop offset={1} stopColor="#c3a4eb" />
       </LinearGradient>
@@ -245,7 +252,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#81300f" />
         <Stop offset={0.016} stopColor="#af6c51" />
         <Stop offset={1} stopColor="#e28181" />
@@ -255,7 +263,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#b9acf4" />
         <Stop offset={1} stopColor="#e1d1f5" />
       </LinearGradient>
@@ -264,7 +273,8 @@ export const AltLogin = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#4a3283" />
         <Stop offset={1} stopColor="#552c88" />
       </LinearGradient>
@@ -322,7 +332,8 @@ export const AltLogin = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#d5cdf8" />
         <Stop offset={1} stopColor="#f3edfb" />
       </LinearGradient>
@@ -331,7 +342,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#8642a0" />
         <Stop offset={1} stopColor="#6456c0" />
       </LinearGradient>
@@ -340,7 +352,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#755cbb" />
         <Stop offset={1} stopColor="#ccedff" />
       </LinearGradient>
@@ -349,7 +362,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#131322" />
         <Stop offset={1} stopColor="#2a4455" />
       </LinearGradient>
@@ -358,7 +372,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#776d7e" />
         <Stop offset={1} stopColor="#9d68c2" />
       </LinearGradient>
@@ -368,7 +383,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#ccedff" />
         <Stop offset={1} stopColor="#9d68c2" />
       </LinearGradient>
@@ -377,7 +393,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#9d68c2" />
         <Stop offset={1} stopColor="#ccedff" />
       </LinearGradient>
@@ -388,7 +405,8 @@ export const AltLogin = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#e5afae" />
         <Stop offset={1} stopColor="#673e3e" />
       </LinearGradient>
@@ -399,7 +417,8 @@ export const AltLogin = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#ff51aa" />
         <Stop offset={1} stopColor="#fe117e" />
       </LinearGradient>
@@ -2020,7 +2039,8 @@ export const DocIcon = (props) => (
       fontSize={6}
       fontFamily="OpenSans-Bold, Open Sans"
       fontWeight={700}
-      letterSpacing=".02em">
+      letterSpacing=".02em"
+    >
       <TSpan x={-8.701} y={0}>
         {"DOCX"}
       </TSpan>
@@ -2440,7 +2460,8 @@ export const EmotyUser = (props) => (
         stroke="#7a8599"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={3}>
+        strokeWidth={3}
+      >
         <Path d="M433 393v-3a6 6 0 0 0-6-6h-12a6 6 0 0 0-6 6v3M427 372a6 6 0 1 1-6-6 6 6 0 0 1 6 6Z" />
       </G>
     </G>
@@ -2461,7 +2482,8 @@ export const EmptyCourse = (props) => (
         transform="translate(193 104)"
         fill="#fff"
         stroke="#c6c6c6"
-        strokeWidth={0.6}>
+        strokeWidth={0.6}
+      >
         <Circle cx={1} cy={1} r={1} stroke="none" />
         <Circle cx={1} cy={1} r={0.7} fill="none" />
       </G>
@@ -2493,7 +2515,8 @@ export const EmptyCourse = (props) => (
           stroke="#c6c6c6"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}>
+          strokeWidth={2}
+        >
           <Path stroke="none" d="M0-.25h61v89H0z" />
           <Path fill="none" d="M1 .75h59v87H1z" />
         </G>
@@ -2536,7 +2559,8 @@ export const EmptyCourse = (props) => (
           stroke="#c6c6c6"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth={2}>
+          strokeWidth={2}
+        >
           <Path stroke="none" d="M-.25-.25h62v89h-62z" />
           <Path fill="none" d="M.75.75h60v87h-60z" />
         </G>
@@ -2578,7 +2602,8 @@ export const EmptyCourse = (props) => (
         stroke="#825efb"
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={2}>
+        strokeWidth={2}
+      >
         <Path stroke="none" d="M155 128h81v87h-81z" />
         <Path fill="none" d="M156 129h79v85h-79z" />
       </G>
@@ -2592,7 +2617,8 @@ export const EmptyCourse = (props) => (
           fill="#825efb"
           fontSize={22}
           fontFamily="Baskerville-SemiBold, Baskerville"
-          fontWeight={600}>
+          fontWeight={600}
+        >
           <TSpan x={0} y={0}>
             {"T"}
           </TSpan>
@@ -2855,7 +2881,8 @@ export const EmptyForms = (props) => (
         data-name="Rectangle 56"
         transform="translate(145 101)"
         fill="#fff"
-        stroke="#c6c6c6">
+        stroke="#c6c6c6"
+      >
         <Rect width={100} height={141} rx={6} stroke="none" />
         <Rect x={0.5} y={0.5} width={99} height={140} rx={5.5} fill="none" />
       </G>
@@ -2864,7 +2891,8 @@ export const EmptyForms = (props) => (
         transform="translate(153 109)"
         fill="#e8e8e8"
         stroke="#c6c6c6"
-        strokeWidth={0.6}>
+        strokeWidth={0.6}
+      >
         <Rect width={83} height={119} rx={2} stroke="none" />
         <Rect
           x={0.3}
@@ -2880,7 +2908,8 @@ export const EmptyForms = (props) => (
         transform="translate(190 231)"
         fill="#fff"
         stroke="#c6c6c6"
-        strokeWidth={0.6}>
+        strokeWidth={0.6}
+      >
         <Ellipse cx={4} cy={3.5} rx={4} ry={3.5} stroke="none" />
         <Ellipse cx={4} cy={3.5} rx={3.7} ry={3.2} fill="none" />
       </G>
@@ -2889,7 +2918,8 @@ export const EmptyForms = (props) => (
         transform="translate(193 104)"
         fill="#fff"
         stroke="#c6c6c6"
-        strokeWidth={0.6}>
+        strokeWidth={0.6}
+      >
         <Circle cx={1} cy={1} r={1} stroke="none" />
         <Circle cx={1} cy={1} r={0.7} fill="none" />
       </G>
@@ -2924,7 +2954,8 @@ export const EmptyForms = (props) => (
         fill="#c6c6c6"
         fontSize={5}
         fontFamily="Montserrat-Bold, Montserrat"
-        fontWeight={700}>
+        fontWeight={700}
+      >
         <TSpan x={0} y={0}>
           {"Customers"}
         </TSpan>
@@ -2934,7 +2965,8 @@ export const EmptyForms = (props) => (
         transform="translate(163 156)"
         fill="#fff"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={37} height={10} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={36.2} height={9.2} rx={1.1} fill="none" />
       </G>
@@ -2943,7 +2975,8 @@ export const EmptyForms = (props) => (
         transform="translate(205 156)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={21} height={10} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={20.2} height={9.2} rx={1.1} />
       </G>
@@ -2961,7 +2994,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 60"
           transform="translate(7.694 .403)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -2969,7 +3003,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 61"
           transform="translate(7.694 2.403)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -2979,7 +3014,8 @@ export const EmptyForms = (props) => (
         transform="translate(163 167)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={37} height={11} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={36.2} height={10.2} rx={1.1} />
       </G>
@@ -2988,7 +3024,8 @@ export const EmptyForms = (props) => (
         transform="translate(205 167)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={21} height={11} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={20.2} height={10.2} rx={1.1} />
       </G>
@@ -3006,7 +3043,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 60"
           transform="translate(7.694 .472)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3014,7 +3052,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 61"
           transform="translate(7.694 2.472)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3024,7 +3063,8 @@ export const EmptyForms = (props) => (
         transform="translate(163 179)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={37} height={11} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={36.2} height={10.2} rx={1.1} />
       </G>
@@ -3033,7 +3073,8 @@ export const EmptyForms = (props) => (
         transform="translate(205 179)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={21} height={11} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={20.2} height={10.2} rx={1.1} />
       </G>
@@ -3051,7 +3092,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 60"
           transform="translate(7.694 .541)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3059,7 +3101,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 61"
           transform="translate(7.694 2.541)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3069,7 +3112,8 @@ export const EmptyForms = (props) => (
         transform="translate(163 191)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={37} height={10} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={36.2} height={9.2} rx={1.1} />
       </G>
@@ -3078,7 +3122,8 @@ export const EmptyForms = (props) => (
         transform="translate(205 191)"
         fill="none"
         stroke="#c6c6c6"
-        strokeWidth={0.8}>
+        strokeWidth={0.8}
+      >
         <Rect width={21} height={10} rx={1.5} stroke="none" />
         <Rect x={0.4} y={0.4} width={20.2} height={9.2} rx={1.1} />
       </G>
@@ -3096,7 +3141,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 60"
           transform="translate(7.694 1.272)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3104,7 +3150,8 @@ export const EmptyForms = (props) => (
           data-name="Rectangle 61"
           transform="translate(7.694 3.272)"
           fill="none"
-          stroke="#c6c6c6">
+          stroke="#c6c6c6"
+        >
           <Path stroke="none" d="M0 0h13v1H0z" />
           <Rect x={0.5} y={0.5} width={12} />
         </G>
@@ -3112,7 +3159,8 @@ export const EmptyForms = (props) => (
       <G
         data-name="Mask Group 4"
         transform="translate(144.758 100.931)"
-        clipPath="url(#a)">
+        clipPath="url(#a)"
+      >
         <Ellipse
           data-name="Ellipse 24"
           cx={21.5}
@@ -3127,7 +3175,8 @@ export const EmptyForms = (props) => (
         data-name="Mask Group 5"
         transform="translate(144.758 100.931)"
         opacity={0.398}
-        clipPath="url(#a)">
+        clipPath="url(#a)"
+      >
         <G data-name="Group 46" transform="translate(68.935 93.459)">
           <Ellipse
             data-name="Ellipse 23"
@@ -3166,7 +3215,8 @@ export const EmptyForms = (props) => (
           transform="translate(216 186)"
           fill="#fff"
           stroke="#7b3ffb"
-          strokeWidth={2}>
+          strokeWidth={2}
+        >
           <Ellipse cx={29.5} cy={30} rx={29.5} ry={30} stroke="none" />
           <Ellipse cx={29.5} cy={30} rx={28.5} ry={29} fill="none" />
         </G>
@@ -4387,7 +4437,8 @@ export const Filter = (props) => (
         y1={0.998}
         x2={0.499}
         y2={0.028}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0.006} stopColor="#ea67a4" />
         <Stop offset={1} stopColor="#ea67a4" stopOpacity={0} />
       </LinearGradient>
@@ -4397,7 +4448,8 @@ export const Filter = (props) => (
         y1={0.999}
         x2={0.499}
         y2={0.028}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0.006} stopColor="#84a2ff" />
         <Stop offset={1} stopColor="#84a2ff" stopOpacity={0} />
       </LinearGradient>
@@ -4830,7 +4882,8 @@ export const Image = (props) => (
         y1={-0.824}
         x2={0.44}
         y2={-1.678}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#2e33a0" />
         <Stop offset={1} stopColor="#0665a5" />
       </LinearGradient>
@@ -4841,7 +4894,8 @@ export const Image = (props) => (
         y1={13.118}
         x2={1.695}
         y2={11.624}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#313131" />
         <Stop offset={1} stopColor="#365e8b" />
       </LinearGradient>
@@ -4851,7 +4905,8 @@ export const Image = (props) => (
         y1={-0.237}
         x2={0.348}
         y2={-1.255}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#1852a0" />
         <Stop offset={1} stopColor="#067ed3" />
       </LinearGradient>
@@ -4861,7 +4916,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#836ceb" />
         <Stop offset={1} stopColor="#c3a4eb" />
       </LinearGradient>
@@ -4870,7 +4926,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#81300f" />
         <Stop offset={0.016} stopColor="#af6c51" />
         <Stop offset={1} stopColor="#e28181" />
@@ -4880,7 +4937,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#b9acf4" />
         <Stop offset={1} stopColor="#e1d1f5" />
       </LinearGradient>
@@ -4889,7 +4947,8 @@ export const Image = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#4a3283" />
         <Stop offset={1} stopColor="#552c88" />
       </LinearGradient>
@@ -4947,7 +5006,8 @@ export const Image = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#d5cdf8" />
         <Stop offset={1} stopColor="#f3edfb" />
       </LinearGradient>
@@ -4956,7 +5016,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#8642a0" />
         <Stop offset={1} stopColor="#6456c0" />
       </LinearGradient>
@@ -4965,7 +5026,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#755cbb" />
         <Stop offset={1} stopColor="#ccedff" />
       </LinearGradient>
@@ -4974,7 +5036,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#131322" />
         <Stop offset={1} stopColor="#2a4455" />
       </LinearGradient>
@@ -4983,7 +5046,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#776d7e" />
         <Stop offset={1} stopColor="#9d68c2" />
       </LinearGradient>
@@ -4993,7 +5057,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#ccedff" />
         <Stop offset={1} stopColor="#9d68c2" />
       </LinearGradient>
@@ -5002,7 +5067,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#9d68c2" />
         <Stop offset={1} stopColor="#ccedff" />
       </LinearGradient>
@@ -5013,7 +5079,8 @@ export const Image = (props) => (
         y1={0.5}
         x2={1}
         y2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#e5afae" />
         <Stop offset={1} stopColor="#673e3e" />
       </LinearGradient>
@@ -5024,7 +5091,8 @@ export const Image = (props) => (
         x1={0.5}
         y1={1}
         x2={0.5}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#ff51aa" />
         <Stop offset={1} stopColor="#fe117e" />
       </LinearGradient>
@@ -6437,7 +6505,8 @@ export const LoginHistory = (props) => (
         y1={105.281}
         x2={61.242}
         y2={89.162}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stopColor="#E2EBFF" />
         <Stop offset={0.991} stopColor="#C0D6FF" />
       </LinearGradient>
@@ -7345,7 +7414,8 @@ export const PaymentFail = (props) => (
         y1={0.219}
         x2={0.91}
         y2={0.774}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#e03338" />
         <Stop offset={0.583} stopColor="#e03338" stopOpacity={0.502} />
         <Stop offset={0.997} stopColor="#e03338" stopOpacity={0.2} />
@@ -7453,7 +7523,8 @@ export const PaymentFail = (props) => (
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit={10}
-        strokeWidth={4}>
+        strokeWidth={4}
+      >
         <Path d="m69.977 50.51-17.7 17.7M52.277 50.51l17.7 17.7" />
       </G>
     </G>
@@ -7496,7 +7567,8 @@ export const PaymentSuccess2 = (props) => (
         y1={0.219}
         x2={0.91}
         y2={0.774}
-        gradientUnits="objectBoundingBox">
+        gradientUnits="objectBoundingBox"
+      >
         <Stop offset={0} stopColor="#2cda9d" />
         <Stop offset={0.583} stopColor="#2cda9d" stopOpacity={0.502} />
         <Stop offset={0.997} stopColor="#2cda9d" stopOpacity={0.2} />
@@ -7695,7 +7767,8 @@ export const PdfIcon = (props) => (
       fontSize={6}
       fontFamily="OpenSans-Bold, Open Sans"
       fontWeight={700}
-      letterSpacing=".02em">
+      letterSpacing=".02em"
+    >
       <TSpan x={-5.871} y={0}>
         {"PDF"}
       </TSpan>
@@ -7924,7 +7997,8 @@ export const ProfileCard = (props) => (
         y1={49.289}
         x2={61.571}
         y2={49.289}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stopColor="#FF66A9" />
         <Stop offset={1} stopColor="#F53689" />
       </LinearGradient>
@@ -7934,7 +8008,8 @@ export const ProfileCard = (props) => (
         y1={75.618}
         x2={54.79}
         y2={75.618}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stopColor="#84A2FF" />
         <Stop offset={1} stopColor="#84A2FF" />
       </LinearGradient>
@@ -7944,7 +8019,8 @@ export const ProfileCard = (props) => (
         y1={66.845}
         x2={50.244}
         y2={66.845}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stopColor="#FF66A9" />
         <Stop offset={1} stopColor="#F53689" />
       </LinearGradient>
@@ -11186,7 +11262,8 @@ export const UploadIcon = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="17"
-    viewBox="0 0 20 17">
+    viewBox="0 0 20 17"
+  >
     <Path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></Path>
   </Svg>
 );
@@ -11197,11 +11274,13 @@ export const EmptyFilter = (props) => (
     width={120}
     height={115}
     fill="none"
-    {...props}>
+    {...props}
+  >
     <G
       style={{
         mixBlendMode: "luminosity",
-      }}>
+      }}
+    >
       <Path
         fill="#E2EBFF"
         d="M5.64 14.946a2.858 2.858 0 0 0 1.824-3.597 2.837 2.837 0 0 0-3.58-1.833 2.858 2.858 0 0 0-1.822 3.598 2.837 2.837 0 0 0 3.579 1.832ZM11.84 5.63a1.943 1.943 0 0 0 1.24-2.446 1.929 1.929 0 0 0-2.433-1.246 1.944 1.944 0 0 0-1.24 2.446 1.93 1.93 0 0 0 2.434 1.247ZM104.947 15.427a4.356 4.356 0 0 0 .275-6.131 4.301 4.301 0 0 0-6.099-.276 4.356 4.356 0 0 0-.274 6.13 4.3 4.3 0 0 0 6.098.277ZM118.658 7.43c.741-.68.793-1.836.116-2.58a1.811 1.811 0 0 0-2.568-.117 1.834 1.834 0 0 0-.116 2.582 1.811 1.811 0 0 0 2.568.116ZM10.637 108.957a1.833 1.833 0 0 0 .115-2.581 1.81 1.81 0 0 0-2.567-.116 1.833 1.833 0 0 0-.116 2.581 1.81 1.81 0 0 0 2.568.116Z"
@@ -11313,7 +11392,8 @@ export const EmptyFilter = (props) => (
         x2={35.146}
         y1={100.971}
         y2={70.994}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop offset={0.006} stopColor="#EA67A4" />
         <Stop offset={1} stopColor="#EA67A4" stopOpacity={0} />
       </LinearGradient>
@@ -11323,7 +11403,8 @@ export const EmptyFilter = (props) => (
         x2={79.388}
         y1={23.281}
         y2={0.641}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop offset={0.006} stopColor="#84A2FF" />
         <Stop offset={1} stopColor="#84A2FF" stopOpacity={0} />
       </LinearGradient>
@@ -11333,7 +11414,8 @@ export const EmptyFilter = (props) => (
         x2={84.447}
         y1={112.339}
         y2={72.54}
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop offset={0.006} stopColor="#EA67A4" />
         <Stop offset={1} stopColor="#EA67A4" stopOpacity={0} />
       </LinearGradient>
@@ -11408,7 +11490,8 @@ export const ViewBreackdownIcon = (props) => (
     height="14"
     viewBox="0 0 14 14"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <Path
       d="M12.9852 6.20629L6.93024 9.83929L0.875243 6.20629C0.810238 6.16728 0.738188 6.14147 0.663206 6.13031C0.588225 6.11915 0.511779 6.12287 0.438235 6.14126C0.289707 6.17839 0.162012 6.27301 0.0832425 6.40429C0.00447324 6.53557 -0.0189182 6.69277 0.018214 6.84129C0.0553462 6.98982 0.14996 7.11752 0.281243 7.19629L6.63324 11.0073C6.72306 11.0613 6.82591 11.0899 6.93074 11.0899C7.03557 11.0899 7.13842 11.0613 7.22824 11.0073L13.5802 7.19629C13.6452 7.15728 13.7019 7.10586 13.7471 7.04495C13.7922 6.98404 13.8249 6.91484 13.8433 6.84129C13.8617 6.76775 13.8654 6.69131 13.8542 6.61632C13.8431 6.54134 13.8172 6.46929 13.7782 6.40429C13.7392 6.33928 13.6878 6.2826 13.6269 6.23747C13.566 6.19234 13.4968 6.15965 13.4232 6.14126C13.3497 6.12287 13.2733 6.11915 13.1983 6.13031C13.1233 6.14147 13.0512 6.16728 12.9862 6.20629H12.9852Z"
       fill="black"
@@ -11429,7 +11512,8 @@ export const MakePaymentIcon = () => (
     height="17"
     viewBox="0 0 16 17"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <Path
       d="M12.4651 3.24096L12.3979 3.21516C12.1655 3.12848 11.9109 3.12143 11.674 3.19509C11.4371 3.26875 11.2314 3.41896 11.0891 3.62216C10.9451 3.81792 10.7408 3.96095 10.5076 4.02928C10.2744 4.09762 10.0252 4.08746 9.79836 4.00037C9.57149 3.91328 9.3795 3.75409 9.25192 3.54727C9.12434 3.34044 9.06822 3.09744 9.0922 2.85562C9.12243 2.6094 9.07007 2.36012 8.94333 2.14688C8.81659 1.93364 8.62264 1.76851 8.39192 1.6774L8.3247 1.6516C7.63829 1.38896 6.87573 1.40934 6.20434 1.70827C5.53294 2.00719 5.00754 2.56025 4.74342 3.24609L1.56434 11.5279C1.40628 11.9396 1.41826 12.3973 1.59766 12.8002C1.77705 13.2032 2.10916 13.5183 2.52092 13.6764L3.62348 14.0996C3.8559 14.1863 4.11052 14.1934 4.3474 14.1197C4.58427 14.046 4.78998 13.8958 4.93226 13.6926C5.07626 13.4969 5.28056 13.3538 5.51377 13.2855C5.74697 13.2172 5.99616 13.2273 6.22303 13.3144C6.4499 13.4015 6.64188 13.5607 6.76947 13.7675C6.89705 13.9743 6.95317 14.2173 6.92919 14.4592C6.89896 14.7054 6.95132 14.9547 7.07806 15.1679C7.2048 15.3811 7.39875 15.5463 7.62947 15.6374L8.73203 16.0606C9.14379 16.2187 9.60147 16.2067 10.0044 16.0273C10.4073 15.8479 10.7225 15.5158 10.8805 15.104L14.0596 6.82224C14.3223 6.13583 14.3019 5.37327 14.0029 4.70188C13.704 4.03048 13.151 3.50508 12.4651 3.24096ZM9.12838 15.0281L8.03183 14.5697C8.07858 14.0839 7.96381 13.5962 7.7053 13.1823C7.44679 12.7684 7.05897 12.4513 6.60195 12.2801C6.14492 12.1089 5.64421 12.0933 5.17738 12.2355C4.71056 12.3778 4.30369 12.6701 4.01983 13.0671L2.91727 12.6438C2.7801 12.5912 2.66947 12.4862 2.6097 12.352C2.54994 12.2178 2.54595 12.0653 2.5986 11.9281L3.39454 9.85463L4.42988 10.2521C4.56717 10.3048 4.71978 10.3008 4.85413 10.2409C4.98848 10.1811 5.09356 10.0704 5.14627 9.9331C5.19897 9.79581 5.19497 9.6432 5.13516 9.50885C5.07534 9.3745 4.9646 9.26942 4.82731 9.21672L3.79197 8.81929L5.77876 3.64352C5.93682 3.23176 6.25198 2.89965 6.6549 2.72026C7.05783 2.54086 7.51551 2.52888 7.92727 2.68694L7.98848 2.74793C7.94217 3.23109 8.05526 3.71613 8.3105 4.12899C8.56573 4.54184 8.94907 4.85981 9.40199 5.03434C9.86261 5.20662 10.3669 5.22373 10.8381 5.08308C11.3094 4.94243 11.7218 4.65172 12.0126 4.25516L12.0677 4.2763C12.2716 4.35456 12.4581 4.47222 12.6165 4.62255C12.7749 4.77288 12.9021 4.95294 12.991 5.15244C13.0798 5.35195 13.1284 5.567 13.1342 5.78531C13.1399 6.00363 13.1025 6.22093 13.0243 6.42481L11.0375 11.6006L10.0031 11.2035C9.86579 11.1508 9.71318 11.1548 9.57883 11.2146C9.44448 11.2744 9.3394 11.3852 9.28669 11.5225C9.23399 11.6598 9.23799 11.8124 9.2978 11.9467C9.35762 12.0811 9.46836 12.1861 9.60565 12.2389L10.641 12.6363L9.84613 14.707C9.82031 14.7753 9.78121 14.8379 9.73109 14.8911C9.68097 14.9443 9.62082 14.9871 9.5541 15.0169C9.48738 15.0468 9.41542 15.0631 9.34235 15.065C9.26929 15.067 9.19657 15.0544 9.12838 15.0281Z"
       fill="#0066F5"
@@ -11447,7 +11531,8 @@ export const FeesLine = () => (
     height="123"
     viewBox="0 0 170 123"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <G opacity="0.1">
       <Path
         d="M-4.76926 -86.9863C110.235 -87.0516 225.245 -86.8557 340.248 -86.9863C340.109 12.041 340.109 111.068 340.248 210.096C225.245 210.259 110.235 209.845 -4.76926 210.096C-4.53008 111.068 -4.97854 12.041 -4.76926 -86.9863Z"
@@ -11529,7 +11614,8 @@ export const ResultLine = () => (
     height="123"
     viewBox="0 0 170 123"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <G opacity="0.1">
       <Path
         d="M-4.71903 -86.8804C110.284 -87.0399 225.287 -87.0399 340.289 -86.8804C340.361 12.0963 340.17 111.073 340.289 210.05C225.289 209.897 110.282 210.213 -4.71903 210.05C-4.86254 111.073 -4.86254 12.0963 -4.71903 -86.8804Z"
@@ -11685,7 +11771,8 @@ export const PaymentLine = () => (
     height="123"
     viewBox="0 0 170 123"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <G opacity="0.1">
       <Path
         d="M-4.74625 -86.9434C110.268 -87.0189 225.282 -87.0189 340.296 -86.9434C340.244 12.0754 340.244 111.094 340.296 210.113C225.282 210.113 110.268 210.113 -4.74625 210.113C-4.85346 111.094 -4.85346 12.0754 -4.74625 -86.9434Z"
@@ -11821,7 +11908,8 @@ export const InvoiceLine = () => (
     height="123"
     viewBox="0 0 170 123"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg">
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <G opacity="0.1">
       <Path
         d="M-4.74625 210.073C110.268 210.149 225.282 210.149 340.296 210.073C340.244 111.054 340.244 12.0357 340.296 -86.9831C225.282 -86.9831 110.268 -86.9831 -4.74625 -86.9831C-4.85346 12.0357 -4.85346 111.054 -4.74625 210.073Z"
@@ -11962,7 +12050,8 @@ export const OnboardingSvg = () => (
     width="312"
     height="281"
     viewBox="0 0 312 281"
-    fill="none">
+    fill="none"
+  >
     <Path
       d="M0.5 -82.4359C0.5 -178.017 77.9834 -255.5 173.564 -255.5H330.598C339.451 -255.5 346.628 -248.323 346.628 -239.47V-82.4359C346.628 13.1447 269.145 90.6282 173.564 90.6282C77.9834 90.6282 0.5 13.1447 0.5 -82.4359Z"
       stroke="white"
@@ -12194,7 +12283,8 @@ export const StudentHeaderOverlay = () => (
     width={Dimensions.get("window").width}
     height="148"
     viewBox="0 0 375 148"
-    fill="none">
+    fill="none"
+  >
     <G clip-path="url(#clip0_2320_14557)">
       <Rect x="-8" width="390" height="148" fill="#0066F5" />
       <Mask
@@ -12204,7 +12294,8 @@ export const StudentHeaderOverlay = () => (
         x="-8"
         y="0"
         width="390"
-        height="148">
+        height="148"
+      >
         <Rect x="-8" width="390" height="148" fill="#133BB7" />
       </Mask>
       <G mask="url(#mask0_2320_14557)">
@@ -12231,7 +12322,8 @@ export const StudentHeaderOverlay = () => (
         y1="232.94"
         x2="243.3"
         y2="-186.686"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stop-color="white" />
         <Stop offset="0.40911" stop-color="white" stop-opacity="0" />
       </LinearGradient>
@@ -12241,7 +12333,8 @@ export const StudentHeaderOverlay = () => (
         y1="348.743"
         x2="204.083"
         y2="-256.806"
-        gradientUnits="userSpaceOnUse">
+        gradientUnits="userSpaceOnUse"
+      >
         <Stop stop-color="white" />
         <Stop offset="0.40911" stop-color="white" stop-opacity="0" />
       </LinearGradient>
@@ -12258,6 +12351,107 @@ export const TickIcon = ({ color }) => (
       d="M4.21394 6.12707L4.56749 6.48062L4.92104 6.12707L10.061 0.987069C10.1558 0.892331 10.3192 0.892331 10.4139 0.987069C10.5087 1.08181 10.5087 1.24522 10.4139 1.33996L4.74394 7.00996C4.69663 7.05726 4.63338 7.08352 4.56749 7.08352C4.50161 7.08352 4.43835 7.05726 4.39104 7.00996L1.56104 4.17996C1.46631 4.08522 1.46631 3.92181 1.56104 3.82707C1.65578 3.73233 1.8192 3.73233 1.91394 3.82707L4.21394 6.12707Z"
       fill={color}
       stroke={color}
+    />
+  </Svg>
+);
+
+export const AlternativeMoreIcon = () => (
+  <Svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <Path
+      d="M4.30654 9.96023C5.48654 9.96023 6.44653 10.9202 6.44653 12.1002C6.44653 13.2802 5.48654 14.2402 4.30654 14.2402C3.12654 14.2402 2.16653 13.2802 2.16653 12.1002C2.16653 10.9202 3.12654 9.96023 4.30654 9.96023ZM4.30654 13.2469C4.93321 13.2469 5.44653 12.7336 5.44653 12.1069C5.44653 11.4802 4.93321 10.9669 4.30654 10.9669C3.67987 10.9669 3.16653 11.4802 3.16653 12.1069C3.16653 12.7336 3.67987 13.2469 4.30654 13.2469Z"
+      fill="#9D9DB7"
+    />
+    <Path
+      d="M11.6932 9.96023C12.8732 9.96023 13.8333 10.9202 13.8333 12.1002C13.8333 13.2802 12.8732 14.2402 11.6932 14.2402C10.5132 14.2402 9.55325 13.2802 9.55325 12.1002C9.55325 10.9202 10.5132 9.96023 11.6932 9.96023ZM11.6932 13.2469C12.3199 13.2469 12.8333 12.7336 12.8333 12.1069C12.8333 11.4802 12.3199 10.9669 11.6932 10.9669C11.0666 10.9669 10.5533 11.4802 10.5533 12.1069C10.5533 12.7336 11.0599 13.2469 11.6932 13.2469Z"
+      fill="#9D9DB7"
+    />
+    <Path
+      d="M4.30654 1.7532C5.48654 1.7532 6.44653 2.7132 6.44653 3.8932C6.44653 5.0732 5.48654 6.0332 4.30654 6.0332C3.12654 6.0332 2.16653 5.0732 2.16653 3.8932C2.16653 2.7132 3.12654 1.7532 4.30654 1.7532ZM4.30654 5.03987C4.93321 5.03987 5.44653 4.52654 5.44653 3.89987C5.44653 3.2732 4.93321 2.75987 4.30654 2.75987C3.67987 2.75987 3.16653 3.2732 3.16653 3.89987C3.16653 4.52654 3.67987 5.03987 4.30654 5.03987Z"
+      fill="#9D9DB7"
+    />
+    <Path
+      d="M11.6932 1.7532C12.8732 1.7532 13.8333 2.7132 13.8333 3.8932C13.8333 5.0732 12.8732 6.0332 11.6932 6.0332C10.5132 6.0332 9.55325 5.0732 9.55325 3.8932C9.55325 2.7132 10.5132 1.7532 11.6932 1.7532ZM11.6932 5.03987C12.3199 5.03987 12.8333 4.52654 12.8333 3.89987C12.8333 3.2732 12.3199 2.75987 11.6932 2.75987C11.0666 2.75987 10.5533 3.2732 10.5533 3.89987C10.5533 4.52654 11.0599 5.03987 11.6932 5.03987Z"
+      fill="#9D9DB7"
+    />
+  </Svg>
+);
+
+export const ResultIcon = () => (
+  <Svg width="21" height="21" viewBox="0 0 25 24" fill="none">
+    <Path
+      d="M12.8333 22.7501C12.2333 22.7501 11.6433 22.6101 11.1633 22.3401L6.43326 19.6101C4.47326 18.2901 4.34326 18.0501 4.34326 15.9801V11.0201C4.34326 8.95006 4.47326 8.71006 6.39326 7.42006L11.1733 4.66006C12.1233 4.11006 13.5533 4.11006 14.5033 4.66006L19.2333 7.39006C21.1933 8.71006 21.3233 8.95006 21.3233 11.0201V15.9801C21.3233 18.0501 21.1933 18.2901 19.2733 19.5801L14.4933 22.3401C14.0233 22.6201 13.4233 22.7501 12.8333 22.7501ZM12.8333 5.75006C12.4933 5.75006 12.1533 5.82006 11.9133 5.96006L7.18326 8.69006C5.84326 9.60006 5.84326 9.60006 5.84326 11.0201V15.9801C5.84326 17.4001 5.84326 17.4001 7.23326 18.3401L11.9233 21.0401C12.4033 21.3201 13.2733 21.3201 13.7533 21.0401L18.4833 18.3101C19.8233 17.4001 19.8233 17.4001 19.8233 15.9801V11.0201C19.8233 9.60006 19.8233 9.60006 18.4333 8.66006L13.7433 5.96006C13.5133 5.82006 13.1733 5.75006 12.8333 5.75006Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M18.3333 8.38C17.9233 8.38 17.5833 8.04 17.5833 7.63V5C17.5833 3.42 16.9133 2.75 15.3333 2.75H10.3333C8.75325 2.75 8.08325 3.42 8.08325 5V7.56C8.08325 7.97 7.74325 8.31 7.33325 8.31C6.92325 8.31 6.58325 7.98 6.58325 7.56V5C6.58325 2.58 7.91325 1.25 10.3333 1.25H15.3333C17.7533 1.25 19.0833 2.58 19.0833 5V7.63C19.0833 8.04 18.7433 8.38 18.3333 8.38Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M14.4632 17.6301C14.2532 17.6301 14.0332 17.5901 13.8132 17.5001L12.8332 17.1201L11.8532 17.5101C11.3232 17.7201 10.7832 17.6701 10.3832 17.3801C9.98325 17.0901 9.77325 16.5901 9.80325 16.0201L9.86324 14.9701L9.19324 14.1601C8.83324 13.7101 8.71325 13.1901 8.87325 12.7101C9.02325 12.2401 9.43324 11.8801 9.98324 11.7401L11.0032 11.4801L11.5732 10.5901C12.1832 9.63012 13.4932 9.63012 14.1032 10.5901L14.6732 11.4801L15.6932 11.7401C16.2432 11.8801 16.6532 12.2401 16.8032 12.7101C16.9532 13.1801 16.8332 13.7101 16.4732 14.1501L15.8032 14.9601L15.8632 16.0101C15.8932 16.5801 15.6832 17.0701 15.2832 17.3701C15.0432 17.5401 14.7632 17.6301 14.4632 17.6301ZM10.3532 13.2001L11.0232 14.0101C11.2532 14.2801 11.3832 14.7101 11.3632 15.0601L11.3032 16.1101L12.2832 15.7201C12.6132 15.5901 13.0532 15.5901 13.3832 15.7201L14.3632 16.1101L14.3032 15.0601C14.2832 14.7101 14.4132 14.2901 14.6432 14.0101L15.3132 13.2001L14.2932 12.9401C13.9532 12.8501 13.5932 12.5901 13.4032 12.3001L12.8432 11.4201L12.2732 12.3001C12.0832 12.6001 11.7232 12.8601 11.3832 12.9501L10.3532 13.2001Z"
+      fill="#292D32"
+    />
+  </Svg>
+);
+
+export const ClassListIcon = () => (
+  <Svg width="21" height="21" viewBox="0 0 25 24" fill="none">
+    <Path
+      d="M18.1201 9.62012H12.8701C12.4601 9.62012 12.1201 9.28012 12.1201 8.87012C12.1201 8.46012 12.4601 8.12012 12.8701 8.12012H18.1201C18.5301 8.12012 18.8701 8.46012 18.8701 8.87012C18.8701 9.28012 18.5401 9.62012 18.1201 9.62012Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M7.62006 10.3798C7.43006 10.3798 7.24006 10.3098 7.09006 10.1598L6.34006 9.40982C6.05006 9.11982 6.05006 8.63982 6.34006 8.34982C6.63006 8.05982 7.11006 8.05982 7.40006 8.34982L7.62006 8.56982L9.34006 6.84982C9.63006 6.55982 10.1101 6.55982 10.4001 6.84982C10.6901 7.13982 10.6901 7.61982 10.4001 7.90982L8.15006 10.1598C8.01006 10.2998 7.82006 10.3798 7.62006 10.3798Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M18.1201 16.6201H12.8701C12.4601 16.6201 12.1201 16.2801 12.1201 15.8701C12.1201 15.4601 12.4601 15.1201 12.8701 15.1201H18.1201C18.5301 15.1201 18.8701 15.4601 18.8701 15.8701C18.8701 16.2801 18.5401 16.6201 18.1201 16.6201Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M7.62006 17.3798C7.43006 17.3798 7.24006 17.3098 7.09006 17.1598L6.34006 16.4098C6.05006 16.1198 6.05006 15.6398 6.34006 15.3498C6.63006 15.0598 7.11006 15.0598 7.40006 15.3498L7.62006 15.5698L9.34006 13.8498C9.63006 13.5598 10.1101 13.5598 10.4001 13.8498C10.6901 14.1398 10.6901 14.6198 10.4001 14.9098L8.15006 17.1598C8.01006 17.2998 7.82006 17.3798 7.62006 17.3798Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M15.5 22.75H9.5C4.07 22.75 1.75 20.43 1.75 15V9C1.75 3.57 4.07 1.25 9.5 1.25H15.5C20.93 1.25 23.25 3.57 23.25 9V15C23.25 20.43 20.93 22.75 15.5 22.75ZM9.5 2.75C4.89 2.75 3.25 4.39 3.25 9V15C3.25 19.61 4.89 21.25 9.5 21.25H15.5C20.11 21.25 21.75 19.61 21.75 15V9C21.75 4.39 20.11 2.75 15.5 2.75H9.5Z"
+      fill="#292D32"
+    />
+  </Svg>
+);
+
+export const FormTeacherIcon = () => (
+  <Svg width="21" height="21" viewBox="0 0 25 24" fill="none">
+    <Path
+      d="M12.1665 22.75C11.4665 22.75 10.7565 22.48 10.2265 21.95L8.51648 20.26C8.09648 19.84 7.51651 19.61 6.92651 19.61H6.1665C4.0965 19.61 2.4165 17.94 2.4165 15.89V4.97C2.4165 2.92 4.0965 1.25 6.1665 1.25H18.1665C20.2365 1.25 21.9165 2.92 21.9165 4.97V15.88C21.9165 17.93 20.2365 19.6 18.1665 19.6H17.4065C16.8165 19.6 16.2365 19.84 15.8165 20.25L14.1065 21.94C13.5765 22.48 12.8665 22.75 12.1665 22.75ZM6.1665 2.75C4.9265 2.75 3.9165 3.75 3.9165 4.97V15.88C3.9165 17.11 4.9265 18.1 6.1665 18.1H6.92651C7.91651 18.1 8.87648 18.5 9.57648 19.19L11.2865 20.88C11.7765 21.36 12.5665 21.36 13.0565 20.88L14.7665 19.19C15.4665 18.5 16.4265 18.1 17.4165 18.1H18.1665C19.4065 18.1 20.4165 17.1 20.4165 15.88V4.97C20.4165 3.74 19.4065 2.75 18.1665 2.75H6.1665Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M12.2363 9.6998C12.2163 9.6998 12.1863 9.6998 12.1663 9.6998C12.1363 9.6998 12.0963 9.6998 12.0663 9.6998C10.6063 9.6498 9.46631 8.4698 9.46631 6.9998C9.46631 5.5098 10.6763 4.2998 12.1663 4.2998C13.6563 4.2998 14.8663 5.5098 14.8663 6.9998C14.8563 8.4698 13.7163 9.6498 12.2563 9.6998C12.2563 9.6998 12.2463 9.6998 12.2363 9.6998ZM12.1663 5.7998C11.5063 5.7998 10.9663 6.3398 10.9663 6.9998C10.9663 7.6498 11.4763 8.1798 12.1163 8.1998C12.1163 8.1898 12.1763 8.1898 12.2463 8.1998C12.8763 8.1598 13.3663 7.6398 13.3663 6.9998C13.3663 6.3398 12.8263 5.7998 12.1663 5.7998Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M12.1665 16.7001C11.0265 16.7001 9.88652 16.4001 8.99652 15.8101C8.15652 15.2501 7.6665 14.4401 7.6665 13.5801C7.6665 12.7201 8.14652 11.9001 8.99652 11.3401C10.7765 10.1601 13.5565 10.1601 15.3265 11.3401C16.1665 11.9001 16.6565 12.7201 16.6565 13.5701C16.6565 14.4301 16.1765 15.2401 15.3265 15.8101C14.4465 16.4101 13.3065 16.7001 12.1665 16.7001ZM9.82648 12.5901C9.39648 12.8801 9.1665 13.2301 9.1665 13.5801C9.1665 13.9301 9.40648 14.2801 9.82648 14.5701C11.0965 15.4201 13.2265 15.4201 14.4965 14.5701C14.9265 14.2801 15.1665 13.9301 15.1565 13.5801C15.1565 13.2301 14.9165 12.8801 14.4965 12.5901C13.2365 11.7401 11.0965 11.7401 9.82648 12.5901Z"
+      fill="#292D32"
+    />
+  </Svg>
+);
+
+export const SkillsIcon = () => (
+  <Svg width="21" height="21" viewBox="0 0 25 24" fill="none">
+    <Path
+      d="M9.50325 22.75H2.83325C2.42325 22.75 2.08325 22.41 2.08325 22V16C2.08325 14.48 3.31325 13.25 4.83325 13.25H9.50325C9.91325 13.25 10.2533 13.59 10.2533 14V22C10.2533 22.41 9.91325 22.75 9.50325 22.75ZM3.58325 21.25H8.75325V14.75H4.83325C4.14325 14.75 3.58325 15.31 3.58325 16V21.25Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M16.1634 22.75H9.49341C9.08341 22.75 8.74341 22.41 8.74341 22V12C8.74341 10.48 9.97341 9.25 11.4934 9.25H14.1634C15.6834 9.25 16.9134 10.48 16.9134 12V22C16.9134 22.41 16.5834 22.75 16.1634 22.75ZM10.2534 21.25H15.4234V12C15.4234 11.31 14.8634 10.75 14.1734 10.75H11.5034C10.8134 10.75 10.2534 11.31 10.2534 12V21.25Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M22.8333 22.75H16.1633C15.7533 22.75 15.4133 22.41 15.4133 22V17C15.4133 16.59 15.7533 16.25 16.1633 16.25H20.8333C22.3533 16.25 23.5833 17.48 23.5833 19V22C23.5833 22.41 23.2433 22.75 22.8333 22.75ZM16.9133 21.25H22.0833V19C22.0833 18.31 21.5233 17.75 20.8333 17.75H16.9133V21.25Z"
+      fill="#292D32"
+    />
+    <Path
+      d="M14.5331 8.35023C14.2931 8.35023 13.9931 8.28021 13.6531 8.08021L12.8331 7.59022L12.0231 8.07023C11.2031 8.56023 10.6631 8.27023 10.4631 8.13023C10.2631 7.99023 9.83314 7.55023 10.0431 6.63023L10.2331 5.80021L9.55315 5.12022C9.13315 4.70022 8.98314 4.20021 9.13314 3.74021C9.28314 3.28021 9.69314 2.96021 10.2731 2.86021L11.1431 2.71021L11.6331 1.73023C12.1731 0.660234 13.4831 0.660234 14.0131 1.73023L14.5031 2.71021L15.3731 2.86021C15.9531 2.96021 16.3731 3.28021 16.5131 3.74021C16.6631 4.20021 16.5031 4.70022 16.0931 5.12022L15.4131 5.80021L15.6031 6.63023C15.8131 7.56023 15.3831 7.99024 15.1831 8.14024C15.0931 8.22024 14.8631 8.35023 14.5331 8.35023ZM12.8331 6.08021C13.0731 6.08021 13.3131 6.14023 13.5131 6.26023L14.0731 6.59022L13.9531 6.05021C13.8531 5.63021 14.0031 5.12022 14.3131 4.81022L14.8231 4.30021L14.1931 4.19023C13.7931 4.12023 13.4031 3.83022 13.2231 3.47022L12.8331 2.72022L12.4531 3.47022C12.2731 3.83022 11.8831 4.12023 11.4831 4.19023L10.8531 4.29023L11.3631 4.80021C11.6731 5.11021 11.8131 5.62023 11.7231 6.04023L11.6031 6.58021L12.1631 6.25022C12.3531 6.13022 12.5931 6.08021 12.8331 6.08021Z"
+      fill="#292D32"
     />
   </Svg>
 );
