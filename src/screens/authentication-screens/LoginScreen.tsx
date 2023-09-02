@@ -1,6 +1,12 @@
 import { useTheme } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Linking,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import AuthLayout from "./components/AuthLayout";
 import useLogin from "./hooks/useLogin";
 import AuthInput from "../../components/Input/AuthInput";
@@ -9,6 +15,9 @@ import Icon from "../../components/Icon/Icon";
 import { lightTheme } from "../../utils/Theme";
 import useCurrentTermGet from "@safsims/general-hooks/useCurrentTermGet";
 import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
+import useGoogleAuth from "./hooks/useGoogleAuth";
+import { GoogleIcon } from "@safsims/components/Images";
+import useDeepLink from "@safsims/utils/useDeepLink/useDeepLink";
 
 const LoginScreen = ({ navigation }) => {
   const { colors } = useTheme();
@@ -16,9 +25,12 @@ const LoginScreen = ({ navigation }) => {
   const school_id = useAppSelector(
     (data) => data.configuration.selectedSchool?.school_id
   );
-  const { loginUser, loading } = useLogin({ school_id });
+  const { value } = useDeepLink();
+  const { loginUser, loading } = useLogin({
+    transfer_code: value,
+  });
+  const { loading: googleLoading, startGoogleLogin } = useGoogleAuth();
 
- 
   const onSubmit = () => {
     const { username, password } = values;
     if (username && password) {
@@ -75,6 +87,28 @@ const LoginScreen = ({ navigation }) => {
               style={{
                 marginTop: 30,
                 height: 60,
+              }}
+            />
+            <Button
+              label="Login with Google"
+              onPress={async () => {
+                const res = await startGoogleLogin();
+                Linking.openURL(res?.redirect_url || "");
+              }}
+              isLoading={googleLoading}
+              IconLeft={<GoogleIcon />}
+              fontStyle={{
+                fontSize: 16,
+                fontWeight: "500",
+                color: "#666",
+              }}
+              style={{
+                marginTop: 30,
+                height: 60,
+                marginVertical: 20,
+                backgroundColor: "#FFF",
+                borderWidth: 1,
+                borderColor: colors.PrimaryBorderColor,
               }}
             />
 

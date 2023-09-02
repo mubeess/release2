@@ -1,4 +1,4 @@
-package com.safsims;
+package com.safsimss;
 
 import android.app.Application;
 import android.content.res.Configuration;

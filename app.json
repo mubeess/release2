@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SAFSIMS",
-    "slug": "SAFSIMS",
+    "name": "SAFSIMSS",
+    "slug": "SAFSIMSS",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.flexisaf.safsims"
+      "bundleIdentifier": "undefined"
     },
     "android": {
       "adaptiveIcon": {
