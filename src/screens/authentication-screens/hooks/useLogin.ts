@@ -17,32 +17,39 @@ import {
   FORM_TEACHER_ROLE,
   handleError,
 } from "@safsims/utils/utils";
-import { useEffect } from "react";
 import Toast from "react-native-toast-message";
 // import Toast from 'react-native-toast-message';
 import { useDispatch } from "react-redux";
 
 interface IProps {
-  username?: string;
-  password?: string;
-  code?: string;
+  username: string;
+  password: string;
+
   callback?: () => void;
 }
 
-interface Props {
-  transfer_code?: string;
-}
-
-const useLogin = ({ transfer_code }: Props) => {
+const useLogin = ({ school_id }) => {
   const { loading, startLoading, stopLoading } = useLoading();
   const dispatch = useDispatch();
 
-  const loginUser = async ({ username, password, code, callback }: IProps) => {
+  const loginUser = async ({
+    username,
+    password,
+
+    callback,
+  }: IProps) => {
     startLoading();
-    const url = code ? `/auth/google/transfer` : "/auth/login";
-    const payload = code ? { code } : { username, password };
+
     try {
-      const { data: ref } = await httpClient.post(url, payload);
+      const { data: ref } = await httpClient.post(
+        "/auth/login",
+        { username, password },
+        {
+          headers: {
+            "X-TENANT-ID": school_id,
+          },
+        }
+      );
 
       const ums = ref.ums_login_response;
       const roles = ums?.user?.roles;
@@ -118,11 +125,7 @@ const useLogin = ({ transfer_code }: Props) => {
       stopLoading();
     }
   };
-  useEffect(() => {
-    if (transfer_code) {
-      loginUser({ code: transfer_code });
-    }
-  }, [transfer_code]);
+
   return {
     loading,
     loginUser,

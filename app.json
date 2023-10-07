@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "SAFSIMSS",
-    "slug": "SAFSIMSS",
-    "version": "2.0.0",
+    "name": "Safsims",
+    "slug": "Safsims",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -11,17 +11,19 @@
       "resizeMode": "cover",
       "backgroundColor": "#437EF7"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "undefined"
+      "bundleIdentifier": "com.anonymous.Safsims"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "undefined"
+      "package": "com.anonymous.Safsims"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,6 +1,6 @@
 {
-  "name": "safsimss",
-  "version": "1.0.0",
+  "name": "safsims",
+  "version": "2.0.0",
   "assets": [
     "assets/fonts"
   ],
@@ -15,8 +15,7 @@
     "format-client": "prettier --write src/generated",
     "lint:ci": "yarn lint --no-error-on-unmatched-pattern --report-unused-disable-directives --max-warnings 0",
     "prepare": "husky install && chmod +x .husky/pre-commit",
-    "generate-client": "openapi --input https://api.safsims.flexisafapps-dev.com/v2/api-docs --output ./src/generated --useOptions --useUnionTypes --request ./src/api/request.ts --client axios && yarn format-client",
-    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
+    "generate-client": "openapi --input https://api.safsims.flexisafapps-dev.com/v2/api-docs --output ./src/generated --useOptions --useUnionTypes --request ./src/api/request.ts --client axios && yarn format-client"
   },
   "dependencies": {
     "@marstankev/react-native-skeleton-content": "^1.0.28",
