@@ -21,6 +21,10 @@ import { useDispatch } from "react-redux";
 import { updateAppUserState } from "@safsims/redux/users/actions";
 import NullComponent from "@safsims/components/Null/NullComponent";
 import AttendanceHomeScreen from "@safsims/screens/form-teacher-screens/attendance-screens/AttendanceHomeScreen";
+import ActivityFeeds from "@safsims/screens/activity-feeds/ActivityFeeds";
+import FeedStackNavigation from "../feed-top-navigation/FeedStackNavigation";
+import ClassessScreen from "@safsims/screens/form-teacher-screens/class-screens/ClassessScreen";
+import SubjectTeacherDasnboard from "@safsims/screens/subject-teacher-screens/Dashboard/SubjectTeacherDasnboard";
 
 const Tab = createBottomTabNavigator();
 
@@ -69,16 +73,16 @@ const FormTeacherTabNavigation = ({ navigation }) => {
             tabBarLabel: "Home",
           }}
           name="FormTeacherHome"
-          component={FormTeacherHomeScreen}
+          component={SubjectTeacherDasnboard}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           options={{
             tabBarIcon: (props) => <FormTeacherClassIcon {...props} />,
-            tabBarLabel: "Classes",
+            tabBarLabel: "Feeds",
           }}
-          name="FormTeacherClass"
-          component={FormTeacherClassStackScreens}
-        />
+          name="FormTeacherFeeds"
+          component={FeedStackNavigation}
+        /> */}
         <Tab.Screen
           options={{
             tabBarIcon: (props) => <Icon name="calendar" {...props} />,
@@ -86,6 +90,15 @@ const FormTeacherTabNavigation = ({ navigation }) => {
           }}
           name="FormTeacherAttendance"
           component={AttendanceHomeScreen}
+        />
+
+        <Tab.Screen
+          options={{
+            tabBarIcon: (props) => <FormTeacherStudenIcon {...props} />,
+            tabBarLabel: "Classess",
+          }}
+          name="FormTeacherClass"
+          component={FormTeacherClassStackScreens}
         />
         <Tab.Screen
           options={{

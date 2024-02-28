@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { LocalTimeReq } from "./LocalTimeReq";
 
 export type UpdateTimeTablePeriodRequest = {
@@ -16,4 +20,5 @@ export type UpdateTimeTablePeriodRequest = {
   period_id: string;
   start_time?: LocalTimeReq;
   subject_id?: string;
+  teacher_id?: string;
 };

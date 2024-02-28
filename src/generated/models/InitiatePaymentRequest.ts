@@ -7,6 +7,7 @@ export type InitiatePaymentRequest = {
   client_secret?: string;
   currency?: "EUR" | "GBP" | "GHC" | "KES" | "NGN" | "USD";
   email: string;
+  latest_version?: boolean;
   parent_id?: string;
   payment_method:
     | "BANK_DEPOSIT"
@@ -20,4 +21,5 @@ export type InitiatePaymentRequest = {
   redirect_url: string;
   student_id: string;
   term_id: string;
+  web?: boolean;
 };

@@ -1,10 +1,14 @@
 import { createStackNavigator } from "@react-navigation/stack";
+import TeacherAssesmentStudent from "@safsims/screens/subject-teacher-screens/Assessment/TeacherAssesmentStudent";
+import TeacherAssessment from "@safsims/screens/subject-teacher-screens/Assessment/TeacherAssessment";
+import AttendanceScreen from "@safsims/screens/subject-teacher-screens/Attendance/AttendanceScreen";
+import MySubject from "@safsims/screens/subject-teacher-screens/MySubject";
 import ClassProfileScreen from "@safsims/screens/form-teacher-screens/class-screens/ClassProfileScreen";
 import ClassessScreen from "@safsims/screens/form-teacher-screens/class-screens/ClassessScreen";
 import EarlyYearsScoreEntryScreen from "@safsims/screens/form-teacher-screens/class-screens/EarlyYearsScoreEntryScreen";
 import ResultDetailScreen from "@safsims/screens/form-teacher-screens/class-screens/ResultDetailScreen";
 import SkillAssesmentScreen from "@safsims/screens/form-teacher-screens/class-screens/SkillAssesmentScreen";
-import SubjectsScreen from "@safsims/screens/form-teacher-screens/class-screens/SubjectsScreen";
+// import SubjectsScreen from "@safsims/screens/form-teacher-screens/class-screens/SubjectsScreen";
 
 import useTabBarDisplay from "@safsims/utils/useTabBarDisplay/useTabBarDisplay";
 const ClassStack = createStackNavigator<any>();
@@ -21,6 +25,19 @@ const FormTeacherClassStackScreens = () => {
         component={SkillAssesmentScreen}
       />
       <ClassStack.Screen name="ResultDetails" component={ResultDetailScreen} />
+      <ClassStack.Screen name="MySubject" component={MySubject} />
+      <ClassStack.Screen
+        name="SubjectAttendance"
+        component={AttendanceScreen}
+      />
+      <ClassStack.Screen
+        name="TeacherAssessment"
+        component={TeacherAssessment}
+      />
+      <ClassStack.Screen
+        name="TeacherAssessmentStudents"
+        component={TeacherAssesmentStudent}
+      />
       <ClassStack.Screen
         name="EarlyYearsScore"
         component={EarlyYearsScoreEntryScreen}

@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 import type { AdminResetPasswordRequest } from "../models/AdminResetPasswordRequest";
+import type { AppleSigninRequest } from "../models/AppleSigninRequest";
 import type { ChangeUsernameRequest } from "../models/ChangeUsernameRequest";
 import type { CompleteTokenTransferRequest } from "../models/CompleteTokenTransferRequest";
 import type { ConfirmPasswordResetRequest } from "../models/ConfirmPasswordResetRequest";
@@ -46,6 +47,32 @@ export class AuthenticationRestControllerService {
         "X-TENANT-ID": xTenantId,
       },
       body: adminResetPasswordRequest,
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * appleSignin
+   * @returns LoginToUmsResponse OK
+   * @returns any Created
+   * @throws ApiError
+   */
+  public static appleSigninUsingPost({
+    appleSigninRequest,
+  }: {
+    /**
+     * appleSigninRequest
+     */
+    appleSigninRequest: AppleSigninRequest;
+  }): CancelablePromise<LoginToUmsResponse | any> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/auth/apple/signin",
+      body: appleSigninRequest,
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,

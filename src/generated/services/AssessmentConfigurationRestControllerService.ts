@@ -7,6 +7,8 @@ import type { AssessmentBreakdownRequest } from "../models/AssessmentBreakdownRe
 import type { AssessmentConfigurationDto } from "../models/AssessmentConfigurationDto";
 import type { AssessmentConfigurationRequest } from "../models/AssessmentConfigurationRequest";
 import type { ClassLevelAssessmentFormatRequest } from "../models/ClassLevelAssessmentFormatRequest";
+import type { SubAssessmentBreakdownDto } from "../models/SubAssessmentBreakdownDto";
+import type { SubAssessmentBreakdownRequest } from "../models/SubAssessmentBreakdownRequest";
 import type { UpdateAssessmentBreakdownNameRequest } from "../models/UpdateAssessmentBreakdownNameRequest";
 import type { UpdateAssessmentNameRequest } from "../models/UpdateAssessmentNameRequest";
 
@@ -78,6 +80,51 @@ export class AssessmentConfigurationRestControllerService {
       method: "PUT",
       url: "/assessment-config",
       body: updateAssessmentNameRequest,
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getAssessmentBreakdowns
+   * @returns AssessmentConfigurationDto OK
+   * @throws ApiError
+   */
+  public static getAssessmentBreakdownsUsingGet({
+    armId,
+    classLevelId,
+    subjectId,
+    termId,
+  }: {
+    /**
+     * arm-id
+     */
+    armId?: string;
+    /**
+     * class-level-id
+     */
+    classLevelId?: string;
+    /**
+     * subject-id
+     */
+    subjectId?: string;
+    /**
+     * term-id
+     */
+    termId?: string;
+  }): CancelablePromise<AssessmentConfigurationDto> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/assessment-config/breakdown",
+      query: {
+        "arm-id": armId,
+        "class-level-id": classLevelId,
+        "subject-id": subjectId,
+        "term-id": termId,
+      },
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,
@@ -193,6 +240,64 @@ export class AssessmentConfigurationRestControllerService {
         401: `Unauthorized`,
         403: `Forbidden`,
         404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * updateAssessmentSubBreakdown
+   * @returns SubAssessmentBreakdownDto OK
+   * @returns any Created
+   * @throws ApiError
+   */
+  public static updateAssessmentSubBreakdownUsingPut({
+    request,
+  }: {
+    /**
+     * request
+     */
+    request: SubAssessmentBreakdownRequest;
+  }): CancelablePromise<Array<SubAssessmentBreakdownDto> | any> {
+    return __request(OpenAPI, {
+      method: "PUT",
+      url: "/assessment-config/sub-breakdown",
+      body: request,
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * deleteAssessmentSubBreakdown
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static deleteAssessmentSubBreakdownUsingDelete({
+    assessmentBreakdownId,
+    subAssessmentBreakdownId,
+  }: {
+    /**
+     * assessmentBreakdownId
+     */
+    assessmentBreakdownId: string;
+    /**
+     * subAssessmentBreakdownId
+     */
+    subAssessmentBreakdownId: string;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "DELETE",
+      url: "/assessment-config/sub-breakdown",
+      query: {
+        assessmentBreakdownId: assessmentBreakdownId,
+        subAssessmentBreakdownId: subAssessmentBreakdownId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
       },
     });
   }

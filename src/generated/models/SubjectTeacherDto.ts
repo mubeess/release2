@@ -9,6 +9,7 @@ export type SubjectTeacherDto = {
   full_name?: string;
   id?: string;
   profile_url?: string;
+  signature_url?: string;
   staff_id?: string;
   subject_code?: string;
   subject_id?: string;

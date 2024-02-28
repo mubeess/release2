@@ -2,7 +2,6 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type UserContactsRequest = {
-  school_ids?: Array<string>;
+export type UserContactsByUmsIdsRequest = {
   ums_ids?: Array<string>;
 };

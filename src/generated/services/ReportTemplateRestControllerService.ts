@@ -80,6 +80,36 @@ export class ReportTemplateRestControllerService {
   }
 
   /**
+   * saveAsposeReportTemplate
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static saveAsposeReportTemplateUsingPost({
+    templateType,
+    name,
+    templateFile,
+  }: {
+    templateType?: string;
+    name?: string;
+    templateFile?: Blob;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/report-templates/aspose",
+      formData: {
+        templateType: templateType,
+        name: name,
+        templateFile: templateFile,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
    * getReportTemplate
    * @returns ReportTemplateDto OK
    * @throws ApiError

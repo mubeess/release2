@@ -1,12 +1,12 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ParentDto } from '@safsims/generated';
-import { persistReducer } from 'redux-persist';
-import userActionTypes from './types';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ParentDto, SubjectTeacherDto } from "@safsims/generated";
+import { persistReducer } from "redux-persist";
+import userActionTypes from "./types";
 
 export interface IAppUserState {
   currentUser?: any;
   parent?: ParentDto;
-  theme?: 'light' | 'dark';
+  theme?: "light" | "dark";
   documents?: any[];
   access_token?: string | null;
   refresh_token?: string | null;
@@ -22,6 +22,7 @@ export interface IAppUserState {
   loginAttempts?: number;
   disableLogin?: boolean;
   disableLoginTime?: number;
+  subject_teacher?: SubjectTeacherDto[];
   tabBarStyle?: {
     display: string;
   };
@@ -32,13 +33,13 @@ const INITIAL_STATE: IAppUserState = {
     linked_students: [],
   },
   parent: undefined,
-  theme: 'light',
-  tabBarStyle: { display: 'flex' },
+  theme: "light",
+  tabBarStyle: { display: "flex" },
   documents: [],
   access_token: null,
   refresh_token: null,
   token_error: null,
-  activeUserType: '',
+  activeUserType: "",
   userTypes: [],
   userTypeModal: false,
   isLoggedIn: false,
@@ -49,13 +50,17 @@ const INITIAL_STATE: IAppUserState = {
   loginAttempts: 0,
   disableLogin: false,
   disableLoginTime: 0,
+  subject_teacher: undefined,
 };
 interface actionParams {
   type: userActionTypes;
   payload: any;
 }
 
-function userReducer(state: IAppUserState = INITIAL_STATE, { type, payload }: actionParams) {
+function userReducer(
+  state: IAppUserState = INITIAL_STATE,
+  { type, payload }: actionParams
+) {
   switch (type) {
     case userActionTypes.USER_LOGIN_START:
       return {
@@ -76,6 +81,11 @@ function userReducer(state: IAppUserState = INITIAL_STATE, { type, payload }: ac
         isLoading: false,
         error: payload,
         isLoggedIn: false,
+      };
+    case userActionTypes.SET_CURRENT_STAFF_SUBJECTS:
+      return {
+        ...state,
+        subject_teacher: payload,
       };
     case userActionTypes.SET_CURRENT_ONBOARDING_STEP:
       return {
@@ -204,13 +214,12 @@ function userReducer(state: IAppUserState = INITIAL_STATE, { type, payload }: ac
         ...state,
         isLoggedIn: false,
         userTypes: [],
-        activeUserType: '',
+        activeUserType: "",
         currentUser: {},
         access_token: null,
         refresh_token: null,
         userTypeModal: false,
         isRefreshingToken: false,
-       
       };
     case userActionTypes.SWITCH_USER_TYPE:
       return {
@@ -300,16 +309,16 @@ function userReducer(state: IAppUserState = INITIAL_STATE, { type, payload }: ac
 }
 
 const persistConfig = {
-  key: 'user',
+  key: "user",
   storage: AsyncStorage,
   blacklist: [
-    'error',
-    'isLoading',
-    'loading',
-    'tokenExpired',
-    'resetPassword',
-    'userTypeModal',
-    'accountVerificationModalOpen',
+    "error",
+    "isLoading",
+    "loading",
+    "tokenExpired",
+    "resetPassword",
+    "userTypeModal",
+    "accountVerificationModalOpen",
   ],
 };
 

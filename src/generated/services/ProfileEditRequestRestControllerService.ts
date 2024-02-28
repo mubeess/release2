@@ -16,7 +16,7 @@ export class ProfileEditRequestRestControllerService {
    * @returns Page_ProfileEditRequestDto_ OK
    * @throws ApiError
    */
-  public static getAllUsingGet1({
+  public static getAllUsingGet2({
     limit,
     offset,
     search,

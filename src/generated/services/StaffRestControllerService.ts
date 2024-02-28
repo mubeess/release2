@@ -60,6 +60,7 @@ export class StaffRestControllerService {
     staff,
     xTenantId,
     photo,
+    signature,
   }: {
     /**
      * staff
@@ -73,6 +74,10 @@ export class StaffRestControllerService {
      * photo
      */
     photo?: Blob;
+    /**
+     * signature
+     */
+    signature?: Blob;
   }): CancelablePromise<StaffDto | any> {
     return __request(OpenAPI, {
       method: "POST",
@@ -83,7 +88,7 @@ export class StaffRestControllerService {
       query: {
         staff: staff,
       },
-      body: photo,
+      body: signature,
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,
@@ -348,6 +353,48 @@ export class StaffRestControllerService {
         "X-TENANT-ID": xTenantId,
       },
       body: photo,
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * uploadSignature
+   * @returns string OK
+   * @returns any Created
+   * @throws ApiError
+   */
+  public static uploadSignatureUsingPost({
+    id,
+    signature,
+    xTenantId,
+  }: {
+    /**
+     * id
+     */
+    id: string;
+    /**
+     * signature
+     */
+    signature: Blob;
+    /**
+     * X-TENANT-ID
+     */
+    xTenantId: string;
+  }): CancelablePromise<string | any> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/staff/{id}/uploads/signature",
+      path: {
+        id: id,
+      },
+      headers: {
+        "X-TENANT-ID": xTenantId,
+      },
+      body: signature,
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,

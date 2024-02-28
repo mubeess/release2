@@ -498,7 +498,7 @@ export class CognitiveSkillRestControllerService {
   }): CancelablePromise<Array<SkillRatingResponse>> {
     return __request(OpenAPI, {
       method: "GET",
-      url: `/cognitive-skill-config/skill-ratings/termly/{term_id}`,
+      url: "/cognitive-skill-config/skill-ratings/termly/{term_id}",
       path: {
         term_id: termId,
       },

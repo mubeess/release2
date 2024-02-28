@@ -1,3 +1,7 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { TermDto } from "./TermDto";
 import type { TimeTablePeriodDto } from "./TimeTablePeriodDto";
 

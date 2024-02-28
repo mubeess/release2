@@ -16,12 +16,24 @@ import moment from "moment";
 import useGetClassAttendance from "../hooks/useGetClassAttendance";
 import useUpdateClassAttendace from "../hooks/useUpdateClassAttendance";
 import useCurrentTermGet from "@safsims/general-hooks/useCurrentTermGet";
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withRepeat,
+  withTiming,
+} from "react-native-reanimated";
 interface IProps {
   armId: string;
   classLevelId: string;
 }
 export default function ClassAttendance({ armId, classLevelId }: IProps) {
   const [calendarOpen, setCalendarOpen] = useState(false);
+  const scaleValue = useSharedValue(1);
+  const AnimatedStatus = useAnimatedStyle(() => {
+    return {
+      transform: [{ scale: scaleValue.value }],
+    };
+  });
   const today = moment();
   const [selectedDay, setSlectedDay] = useState(
     moment(today).format("YYYY/MM/DD")
@@ -41,6 +53,16 @@ export default function ClassAttendance({ armId, classLevelId }: IProps) {
   const setCurrentDate = (date) => {
     setSlectedDay(date);
   };
+  const recorded = attendance.filter(
+    (attendance) => attendance.date_recorded !== null
+  );
+  useEffect(() => {
+    scaleValue.value = withRepeat(
+      withTiming(scaleValue.value == 1 ? 0.3 : 1, { duration: 1000 }),
+      -1,
+      true
+    );
+  }, []);
   return (
     <>
       <View style={styles.date}>
@@ -52,6 +74,32 @@ export default function ClassAttendance({ armId, classLevelId }: IProps) {
         >
           {selectedDay}
         </Text>
+
+        {!loadingAttendance && (
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              marginTop: 10,
+            }}
+          >
+            <Animated.View
+              style={[
+                styles.status,
+                {
+                  backgroundColor:
+                    recorded.length > 0
+                      ? lightTheme.colors.PrimaryGreen
+                      : lightTheme.colors.PrimaryRed,
+                },
+                AnimatedStatus,
+              ]}
+            />
+            <Text>
+              Attendance {recorded.length > 0 ? "Taken" : "Not Taken"}
+            </Text>
+          </View>
+        )}
       </View>
 
       <View style={styles.searchBar}>
@@ -229,5 +277,11 @@ const styles = StyleSheet.create({
   },
   button2: {
     width: 40,
+  },
+  status: {
+    width: 20,
+    height: 20,
+    borderRadius: 20,
+    marginRight: 10,
   },
 });

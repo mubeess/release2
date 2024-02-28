@@ -75,7 +75,7 @@ export class InvoiceTemplateRestControllerService {
    * @returns any OK
    * @throws ApiError
    */
-  public static deleteUsingDelete({
+  public static deleteUsingDelete1({
     classLevelId,
     termId,
   }: {

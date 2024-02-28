@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 export type SubscriptionPlanDto = {
-  amount: number;
+  amount: Record<string, number>;
   features?: Array<
     | "ATTENDANCE_REPORT_AND_ANALYSIS"
     | "BEHAVIOUR_ASSESSMENT"
@@ -29,6 +29,7 @@ export type SubscriptionPlanDto = {
     | "STUDENT_PROGRESS_REPORT"
     | "SUBJECT_ATTENDANCE"
     | "TEACHERS_ENROLLMENT"
+    | "TIME_TABLE"
   >;
   id?: string;
   max_student_count: number;

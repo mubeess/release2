@@ -2,16 +2,22 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { lightTheme } from "@safsims/utils/Theme";
 import { FormTeacherStudenIcon } from "@safsims/components/Images";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native";
 
 export default function TabMoreMenu() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.decoration} />
       <View style={styles.menuList}>
-        <View style={styles.menu}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("FormTeacherClass")}
+          style={styles.menu}
+        >
           <FormTeacherStudenIcon color="#000" />
           <Text>CBT</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

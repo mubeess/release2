@@ -5,6 +5,7 @@
 export type GradeRequest = {
   color?: string;
   end_range?: number;
+  evaluation_item_uuids?: Array<string>;
   grade_group_id?: string;
   id?: string;
   letter_grade?: string;

@@ -1,12 +1,6 @@
 import { useTheme } from "@react-navigation/native";
 import { useEffect, useState } from "react";
-import {
-  Linking,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Linking, StyleSheet, TouchableOpacity, View } from "react-native";
 import AuthLayout from "./components/AuthLayout";
 import useLogin from "./hooks/useLogin";
 import AuthInput from "../../components/Input/AuthInput";
@@ -18,13 +12,12 @@ import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
 import useGoogleAuth from "./hooks/useGoogleAuth";
 import { GoogleIcon } from "@safsims/components/Images";
 import useDeepLink from "@safsims/utils/useDeepLink/useDeepLink";
+import Text from "@safsims/components/Text/Text";
 
 const LoginScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const [values, setValues] = useState({ username: "", password: "" });
-  const school_id = useAppSelector(
-    (data) => data.configuration.selectedSchool?.school_id
-  );
+  const school_id = useAppSelector((data) => data.configuration.selectedSchool);
   const { value } = useDeepLink();
   const { loginUser, loading } = useLogin({
     transfer_code: value,
@@ -70,7 +63,10 @@ const LoginScreen = ({ navigation }) => {
           <>
             <View style={{ marginTop: 30, flexDirection: "row" }}>
               <Text>Forgot your password?</Text>
-              <TouchableOpacity style={{ marginLeft: 5 }}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("ResetLink")}
+                style={{ marginLeft: 5 }}
+              >
                 <Text style={{ color: colors.PrimaryBlue }}>Click here</Text>
               </TouchableOpacity>
             </View>

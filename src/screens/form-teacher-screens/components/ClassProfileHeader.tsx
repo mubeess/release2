@@ -17,6 +17,9 @@ export default function ClassProfileHeader({ name, short_name }) {
         <Text h2 style={{ textAlign: "center" }}>
           {name}
         </Text>
+        {short_name && (
+          <Text style={{ textAlign: "center" }}>{short_name}</Text>
+        )}
         {/* <Text style={{ textAlign: "center" }}>{short_name}</Text> */}
       </View>
     </View>

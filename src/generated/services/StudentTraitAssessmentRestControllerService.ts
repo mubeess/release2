@@ -15,10 +15,12 @@ export class StudentTraitAssessmentRestControllerService {
    * @throws ApiError
    */
   public static getStudentTraitAssessmentsUsingGet({
+    includeUnapproved,
     studentId,
     termId,
     traitId,
   }: {
+    includeUnapproved?: boolean;
     studentId?: string;
     termId?: string;
     traitId?: string;
@@ -27,6 +29,7 @@ export class StudentTraitAssessmentRestControllerService {
       method: "GET",
       url: "/student-trait-assessments",
       query: {
+        includeUnapproved: includeUnapproved,
         studentId: studentId,
         termId: termId,
         traitId: traitId,

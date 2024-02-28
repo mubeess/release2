@@ -11,4 +11,6 @@ export type ReportGenerationConfigRequest = {
   config_name: string;
   grade_group_id?: string;
   report_template: string;
+  scale_to_percent?: boolean;
+  term_id: string;
 };

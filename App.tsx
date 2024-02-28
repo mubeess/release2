@@ -1,14 +1,15 @@
-import { useFonts } from 'expo-font';
-import { StyleSheet } from 'react-native';
-import Toast from 'react-native-toast-message';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import AppNavigationContainer from './src/navigation/AppNavigationContainer';
-import { persistor, store } from './src/redux/store';
+import { useFonts } from "expo-font";
+import { StyleSheet } from "react-native";
+import Toast from "react-native-toast-message";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import AppNavigationContainer from "./src/navigation/AppNavigationContainer";
+import { persistor, store } from "./src/redux/store";
+import { tenantInterceptor } from "@safsims/utils/http-client";
 
 export default function App() {
   const [fontLoaded] = useFonts({
-    saf: require('./assets/fonts/saf.ttf'),
+    saf: require("./assets/fonts/saf.ttf"),
   });
   if (!fontLoaded) return null;
   return (
@@ -22,5 +23,5 @@ export default function App() {
     </>
   );
 }
-
+tenantInterceptor(store);
 const styles = StyleSheet.create({});

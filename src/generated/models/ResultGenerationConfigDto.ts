@@ -6,6 +6,7 @@ import type { ClassLevelDto } from "./ClassLevelDto";
 import type { GradeGroupDto } from "./GradeGroupDto";
 import type { TemplateData } from "./TemplateData";
 import type { TermAssessmentConfiguration } from "./TermAssessmentConfiguration";
+import type { TermDto } from "./TermDto";
 
 export type ResultGenerationConfigDto = {
   active?: boolean;
@@ -18,5 +19,7 @@ export type ResultGenerationConfigDto = {
   id?: string;
   report_template_id?: string;
   report_template_name?: string;
+  scale_to_percent?: boolean;
   template_data?: TemplateData;
+  term?: TermDto;
 };

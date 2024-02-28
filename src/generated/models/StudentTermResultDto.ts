@@ -5,6 +5,7 @@
 import type { AssessmentAnalysis } from "./AssessmentAnalysis";
 import type { ClassInformation_ } from "./ClassInformation_";
 import type { Student_ } from "./Student_";
+import type { SubjectGroupResult } from "./SubjectGroupResult";
 import type { SubjectResult } from "./SubjectResult";
 import type { Term_ } from "./Term_";
 
@@ -14,6 +15,7 @@ export type StudentTermResultDto = {
   result?: AssessmentAnalysis;
   result_approved?: boolean;
   student?: Student_;
+  subject_group_results?: Array<SubjectGroupResult>;
   subject_results?: Array<SubjectResult>;
   term?: Term_;
 };

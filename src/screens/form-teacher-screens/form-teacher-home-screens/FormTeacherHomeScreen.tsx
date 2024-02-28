@@ -74,10 +74,8 @@ function FormTeacherHomeScreen({ navigation }) {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <AppHeader navigation={navigation} />
-
-      <ScrollView style={styles.content}>
+    <>
+      <View style={styles.content}>
         <View style={styles.head}>
           <Text h3>Assigned Classes</Text>
           <Button
@@ -160,7 +158,7 @@ function FormTeacherHomeScreen({ navigation }) {
             ))}
           </View>
         )}
-      </ScrollView>
+      </View>
 
       <Modal visible={teacherModalOpen} animationType="slide">
         <View style={styles.moreAttendance}>
@@ -234,7 +232,7 @@ function FormTeacherHomeScreen({ navigation }) {
           </ScrollView>
         </View>
       </Modal>
-    </View>
+    </>
   );
 }
 const styles = StyleSheet.create({
@@ -258,7 +256,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    padding: 20,
   },
   attendanceContainer: {
     maxHeight: 200,

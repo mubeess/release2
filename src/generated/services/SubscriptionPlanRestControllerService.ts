@@ -108,6 +108,7 @@ export class SubscriptionPlanRestControllerService {
       | "STUDENT_PROGRESS_REPORT"
       | "SUBJECT_ATTENDANCE"
       | "TEACHERS_ENROLLMENT"
+      | "TIME_TABLE"
     >
   > {
     return __request(OpenAPI, {

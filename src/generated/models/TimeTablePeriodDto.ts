@@ -1,6 +1,11 @@
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+
 import type { ArmDto } from "./ArmDto";
 import type { ClassLevelDto } from "./ClassLevelDto";
 import type { LocalTimeRes } from "./LocalTimeRes";
+import type { StaffLiteDto } from "./StaffLiteDto";
 import type { SubjectDto } from "./SubjectDto";
 
 export type TimeTablePeriodDto = {
@@ -19,5 +24,6 @@ export type TimeTablePeriodDto = {
   id?: string;
   start_time?: LocalTimeRes;
   subject?: SubjectDto;
+  teacher?: StaffLiteDto;
   time_table_id?: string;
 };

@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
+import type { ClassArmEvaluatorDto } from "./ClassArmEvaluatorDto";
 import type { ClassInformationDto } from "./ClassInformationDto";
 import type { ParentDto } from "./ParentDto";
 import type { StaffDto } from "./StaffDto";
@@ -10,6 +11,7 @@ import type { SubjectTeacherDto } from "./SubjectTeacherDto";
 import type { UmsLoginResponse } from "./UmsLoginResponse";
 
 export type LoginToUmsResponse = {
+  evaluator_roles?: Array<ClassArmEvaluatorDto>;
   form_teachers?: Array<ClassInformationDto>;
   login_count?: number;
   parent?: ParentDto;

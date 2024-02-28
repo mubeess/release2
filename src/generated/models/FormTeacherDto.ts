@@ -6,5 +6,6 @@ export type FormTeacherDto = {
   full_name?: string;
   id?: string;
   profile_url?: string;
+  signature_url?: string;
   staff_id?: string;
 };

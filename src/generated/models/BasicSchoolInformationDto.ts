@@ -25,5 +25,8 @@ export type BasicSchoolInformationDto = {
   state?: State;
   support_email?: string;
   support_phone_number?: string;
+  uses_grading_evaluation?: boolean;
+  uses_subject_grouping?: boolean;
+  uses_subject_traits?: boolean;
   website?: string;
 };

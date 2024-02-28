@@ -15,7 +15,7 @@ export class LessonPlanTemplateRestControllerService {
    * @returns LessonPlanTemplateDto OK
    * @throws ApiError
    */
-  public static getAllUsingGet(): CancelablePromise<
+  public static getAllUsingGet1(): CancelablePromise<
     Array<LessonPlanTemplateDto>
   > {
     return __request(OpenAPI, {
@@ -60,7 +60,7 @@ export class LessonPlanTemplateRestControllerService {
    * @returns any Created
    * @throws ApiError
    */
-  public static updateUsingPut({
+  public static updateUsingPut1({
     templateDto,
   }: {
     /**
@@ -162,7 +162,7 @@ export class LessonPlanTemplateRestControllerService {
    * @returns any OK
    * @throws ApiError
    */
-  public static deleteUsingDelete1({
+  public static deleteUsingDelete2({
     templateId,
   }: {
     /**

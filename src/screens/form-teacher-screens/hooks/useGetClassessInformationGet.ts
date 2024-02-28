@@ -26,6 +26,7 @@ const useGetClassessInformationGet = () => {
           { termId: currentTerm?.term_id }
         )
       );
+      console.log(data, "data");
       setClasses(data);
       setLoading(false);
     } catch (error) {

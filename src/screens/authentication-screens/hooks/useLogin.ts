@@ -2,6 +2,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { updateAppPrivilegeState } from "@safsims/redux/privileges/actions";
 import {
   setActiveUserType,
+  setCurrentStaffSubjects,
   setLoginAttempts,
   setUserTypes,
   updateAppUserState,
@@ -16,6 +17,7 @@ import {
   ONBOARDING_ROLE,
   FORM_TEACHER_ROLE,
   handleError,
+  SUBJECT_TEACHER_ROLE,
 } from "@safsims/utils/utils";
 import { useEffect } from "react";
 import Toast from "react-native-toast-message";
@@ -46,21 +48,29 @@ const useLogin = ({ transfer_code }: Props) => {
 
       const ums = ref.ums_login_response;
       const roles = ums?.user?.roles;
+
       const isSuperAdmin = !!roles?.find(
         (item) => item.role?.name === ONBOARDING_ROLE
       );
+
       const isAdmin = !!roles?.find((item) => item.role?.name === ADMIN_ROLE);
       let isFormTeacher = false;
+      let isSubjectTeacher = false;
       if (ref.user_types.find((x) => x.toLowerCase() === "staff")) {
         const form_teachers = ref.form_teachers || [];
+        const subject_teachers = ref.subject_teachers || [];
         if (form_teachers.length > 0) {
           isFormTeacher = true;
+        }
+
+        if (subject_teachers.length > 0) {
+          isSubjectTeacher = true;
         }
       }
       const isDirector = !!roles?.find(
         (item) => item.role?.name === DIRECTOR_ROLE
       );
-      if (!isDirector && !isFormTeacher) {
+      if (!isDirector && !isFormTeacher && !isAdmin && !isSubjectTeacher) {
         Toast.show({
           type: "error",
           text1: "Error",
@@ -81,17 +91,21 @@ const useLogin = ({ transfer_code }: Props) => {
         ...ref[item.toLowerCase()],
       }));
       dispatch(setUserTypes(userTypes));
+      if (isSubjectTeacher) {
+        dispatch(setCurrentStaffSubjects(JSON.stringify(ref.subject_teachers)));
+        // console.log(ref.subject_teachers, "main");
+      }
 
       if (isDirector) {
         dispatch(setActiveUserType(DIRECTOR_ROLE));
 
         dispatch(setLoginAttempts(0));
-      }
-      if (isFormTeacher) {
+      } else if (isFormTeacher) {
         dispatch(setActiveUserType(FORM_TEACHER_ROLE));
-      }
-      if (isAdmin && !isDirector) {
+      } else if (isAdmin && !isDirector) {
         dispatch(setActiveUserType(ADMIN_ROLE));
+      } else if (isSubjectTeacher) {
+        dispatch(setActiveUserType(SUBJECT_TEACHER_ROLE));
       }
       dispatch(
         updateAppUserState({
@@ -104,6 +118,7 @@ const useLogin = ({ transfer_code }: Props) => {
       const director = userTypes.find(
         (item) => item.user_type === UserTypesEnum.STAFF
       );
+      console.log(director, "director");
       dispatch(userLoginSuccess(director));
 
       callback?.();

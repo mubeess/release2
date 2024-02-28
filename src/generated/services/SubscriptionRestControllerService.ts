@@ -8,6 +8,7 @@ import type { MakePaymentRequest } from "../models/MakePaymentRequest";
 import type { Page_SubscriptionDto_ } from "../models/Page_SubscriptionDto_";
 import type { RenewSubscriptionPlanRequest } from "../models/RenewSubscriptionPlanRequest";
 import type { SubscriptionDto } from "../models/SubscriptionDto";
+import type { UpgradeSubscriptionRequest } from "../models/UpgradeSubscriptionRequest";
 
 import type { CancelablePromise } from "../core/CancelablePromise";
 import { OpenAPI } from "../core/OpenAPI";
@@ -233,6 +234,39 @@ export class SubscriptionRestControllerService {
       path: {
         "term-id": termId,
       },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * upgradeSubscriptionPlan
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static upgradeSubscriptionPlanUsingPost({
+    request,
+    xTenantId,
+  }: {
+    /**
+     * request
+     */
+    request: UpgradeSubscriptionRequest;
+    /**
+     * X-TENANT-ID
+     */
+    xTenantId: string;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/subscriptions/upgrade",
+      headers: {
+        "X-TENANT-ID": xTenantId,
+      },
+      body: request,
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,

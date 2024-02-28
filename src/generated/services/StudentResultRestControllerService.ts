@@ -206,6 +206,39 @@ export class StudentResultRestControllerService {
   }
 
   /**
+   * getClassLevelPerformanceAnalysis
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static getClassLevelPerformanceAnalysisUsingGet({
+    classLevelId,
+    termId,
+  }: {
+    /**
+     * class-level-id
+     */
+    classLevelId: string;
+    /**
+     * term-id
+     */
+    termId: string;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/student-results/class-level-performance-analysis",
+      query: {
+        "class-level-id": classLevelId,
+        "term-id": termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
    * generateStudentCumulativeResult
    * @returns CumulativeResultAndAssessmentDef OK
    * @throws ApiError
@@ -392,6 +425,57 @@ export class StudentResultRestControllerService {
   }
 
   /**
+   * getStudentResultAsposeReport
+   * @returns string OK
+   * @throws ApiError
+   */
+  public static getStudentResultAsposeReportUsingGet({
+    resultConfigId,
+    studentId,
+    templateId,
+    termId,
+    includeUnapproved = true,
+  }: {
+    /**
+     * result-config-id
+     */
+    resultConfigId: string;
+    /**
+     * student-id
+     */
+    studentId: string;
+    /**
+     * template-id
+     */
+    templateId: string;
+    /**
+     * term-id
+     */
+    termId: string;
+    /**
+     * include-unapproved
+     */
+    includeUnapproved?: boolean;
+  }): CancelablePromise<string> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/student-results/report/aspose",
+      query: {
+        "include-unapproved": includeUnapproved,
+        "result-config-id": resultConfigId,
+        "student-id": studentId,
+        "template-id": templateId,
+        "term-id": termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
    * getStudentsResultReports
    * @returns StudentReportResponse OK
    * @throws ApiError
@@ -432,6 +516,90 @@ export class StudentResultRestControllerService {
         "class-level-id": classLevelId,
         "include-unapproved": includeUnapproved,
         "result-config-id": resultConfigId,
+        "term-id": termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getBulkAsposeReports
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static getBulkAsposeReportsUsingGet({
+    armId,
+    classLevelId,
+    resultConfigId,
+    templateId,
+    termId,
+    includeUnapproved = true,
+  }: {
+    /**
+     * arm-id
+     */
+    armId: string;
+    /**
+     * class-level-id
+     */
+    classLevelId: string;
+    /**
+     * result-config-id
+     */
+    resultConfigId: string;
+    /**
+     * template-id
+     */
+    templateId: string;
+    /**
+     * term-id
+     */
+    termId: string;
+    /**
+     * include-unapproved
+     */
+    includeUnapproved?: boolean;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/student-results/report/bulk/aspose",
+      query: {
+        "arm-id": armId,
+        "class-level-id": classLevelId,
+        "include-unapproved": includeUnapproved,
+        "result-config-id": resultConfigId,
+        "template-id": templateId,
+        "term-id": termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getPerformanceAnalysis
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static getPerformanceAnalysisUsingGet({
+    termId,
+  }: {
+    /**
+     * term-id
+     */
+    termId: string;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/student-results/school-performance-analysis",
+      query: {
         "term-id": termId,
       },
       errors: {

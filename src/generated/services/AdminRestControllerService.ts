@@ -40,4 +40,31 @@ export class AdminRestControllerService {
       },
     });
   }
+
+  /**
+   * sendVerificationLinkBulk
+   * @returns any OK
+   * @throws ApiError
+   */
+  public static sendVerificationLinkBulkUsingPost({
+    userType,
+  }: {
+    /**
+     * userType
+     */
+    userType: string;
+  }): CancelablePromise<any> {
+    return __request(OpenAPI, {
+      method: "POST",
+      url: "/admin/verify/bulk/{userType}",
+      path: {
+        userType: userType,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
 }

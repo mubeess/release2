@@ -35,6 +35,7 @@ const useGetClassAttendance = ({
           termId: currentTerm?.term_id,
         })
       );
+
       setStudents(data);
       setLoading(false);
     } catch (error) {

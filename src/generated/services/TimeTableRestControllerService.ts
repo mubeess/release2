@@ -3,11 +3,11 @@
 /* eslint-disable */
 import type { CreateTimeTableRequest } from "../models/CreateTimeTableRequest";
 import type { TimeTableDto } from "../models/TimeTableDto";
+import type { UpdateTimeTableRequest } from "../models/UpdateTimeTableRequest";
 
 import type { CancelablePromise } from "../core/CancelablePromise";
 import { OpenAPI } from "../core/OpenAPI";
 import { request as __request } from "../core/request";
-import { UpdateTimeTableRequest } from "../models/UpdateTimeTableRequest";
 
 export class TimeTableRestControllerService {
   /**
@@ -132,6 +132,8 @@ export class TimeTableRestControllerService {
     armId,
     classLevelId,
     termId,
+    subjectId,
+    traitId,
   }: {
     /**
      * arm_id
@@ -145,6 +147,14 @@ export class TimeTableRestControllerService {
      * term_id
      */
     termId: string;
+    /**
+     * subject_id
+     */
+    subjectId?: string;
+    /**
+     * trait_id
+     */
+    traitId?: string;
   }): CancelablePromise<TimeTableDto> {
     return __request(OpenAPI, {
       method: "GET",
@@ -155,6 +165,8 @@ export class TimeTableRestControllerService {
       query: {
         arm_id: armId,
         class_level_id: classLevelId,
+        subject_id: subjectId,
+        trait_id: traitId,
       },
       errors: {
         401: `Unauthorized`,
@@ -205,6 +217,8 @@ export class TimeTableRestControllerService {
   public static getTimeTableForSubjectTeacherUsingGet({
     staffId,
     termId,
+    armId,
+    classLevelId,
   }: {
     /**
      * staff_id
@@ -214,6 +228,14 @@ export class TimeTableRestControllerService {
      * term_id
      */
     termId: string;
+    /**
+     * arm_id
+     */
+    armId?: string;
+    /**
+     * class_level_id
+     */
+    classLevelId?: string;
   }): CancelablePromise<TimeTableDto> {
     return __request(OpenAPI, {
       method: "GET",
@@ -221,6 +243,10 @@ export class TimeTableRestControllerService {
       path: {
         staff_id: staffId,
         term_id: termId,
+      },
+      query: {
+        arm_id: armId,
+        class_level_id: classLevelId,
       },
       errors: {
         401: `Unauthorized`,

@@ -32,6 +32,7 @@ export type StaffDto = {
   other_names?: string;
   phone?: string;
   profile_pic?: string;
+  signature?: string;
   staff_id?: string;
   staff_type?: "ACADEMIC" | "NON_ACADEMIC";
   staff_ums_id?: string;

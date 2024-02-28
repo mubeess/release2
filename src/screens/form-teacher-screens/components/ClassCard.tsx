@@ -11,7 +11,7 @@ export default function ClassCard({ onPress, data }: ClassProps) {
     <TouchableOpacity onPress={onPress} style={styles.container}>
       <View style={styles.head}>
         <Text h2 style={styles.textHeader}>
-          {data.class_level?.name}
+          {data.class_level?.name} {data.arm?.name}
         </Text>
         <Text style={styles.textTitle}>{data.class_level?.short_name}</Text>
       </View>

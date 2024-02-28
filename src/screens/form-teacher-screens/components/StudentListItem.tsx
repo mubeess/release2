@@ -1,6 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import Text from "@safsims/components/Text/Text";
 import { ClassMemberDto } from "@safsims/generated";
+import { useAppSelector } from "@safsims/redux/hooks/useAppSelector";
 import { lightTheme } from "@safsims/utils/Theme";
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
@@ -9,20 +10,24 @@ interface IProps {
   student: ClassMemberDto;
   index?: number;
   early_years?: boolean;
+  subjectId?: string;
 }
 export default function StudentListItem({
   route,
   student,
   index,
   early_years,
+  subjectId,
 }: IProps) {
   const navigate = useNavigation();
+
   return (
     <TouchableOpacity
       onPress={() => {
         if (route == "") {
           return;
         }
+
         navigate.navigate(route, {
           studentId: student.student_dto?.id,
           termId: student.class_information_dto?.term?.term_id,
@@ -30,6 +35,7 @@ export default function StudentListItem({
           armId: student.class_information_dto?.arm?.id,
           index,
           early_years,
+          subjectId,
         });
       }}
       style={styles.container}

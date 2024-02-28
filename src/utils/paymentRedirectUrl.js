@@ -1,11 +1,11 @@
-import { school_id } from './constants';
+import { school_id } from "./constants";
 
 const redirect_url = {
   development: {
     API_BASE_URL:
-      school_id === 'ICS'
-        ? 'http://localhost:3000/payment-verification'
-        : 'http://safsims.safsims-dev.com/payment-verification',
+      school_id === "ICS"
+        ? "http://localhost:3000/payment-verification"
+        : "http://safsims.safsims-dev.com/payment-verification",
   },
   staging: {
     API_BASE_URL: `https://${school_id}.safsims-stage.com/payment-verification`,
@@ -15,4 +15,5 @@ const redirect_url = {
   },
 };
 
-export default redirect_url[process.env.REACT_APP_ENV || process.env.NODE_ENV];
+export default redirect_url.production;
+// [process.env.REACT_APP_ENV || process.env.NODE_ENV];

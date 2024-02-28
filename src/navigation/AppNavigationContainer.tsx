@@ -14,12 +14,15 @@ import { updateAppUserState } from "../redux/users/actions";
 import { darkTheme, lightTheme } from "../utils/Theme";
 import OnboardingStackScreens from "./onboarding-stack-navigation/OnboardinStackNavigation";
 import SelectSchoolScreen from "../screens/authentication-screens/SelectSchool";
+import useNotification from "@safsims/general-hooks/useNotification";
+import pusherService from "@safsims/utils/pusherService";
 
 const AppNavigationContainer = () => {
   const dispatch = useDispatch();
   const theme = useAppSelector((state) => state.user?.theme);
   const token = useAppSelector((state) => state.user?.access_token);
   const onboarded = useAppSelector((state) => state.user.onboarded);
+  const { requestNotificationPermission } = useNotification();
   const setTheme = (theme: ColorSchemeName) => {
     dispatch(
       updateAppUserState({
@@ -36,6 +39,10 @@ const AppNavigationContainer = () => {
     const event = Appearance.addChangeListener(themeChangeListener);
     return () => event.remove();
   }, [themeChangeListener]);
+  useEffect(() => {
+    requestNotificationPermission();
+    pusherService.initialize();
+  }, []);
 
   ThemeManager.setComponentTheme("Text", (props: any, context: any) => {
     return {

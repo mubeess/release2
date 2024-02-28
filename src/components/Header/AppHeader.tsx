@@ -25,9 +25,15 @@ interface IProps {
   onBack?: () => void;
   navigation: any;
   pageTitle?: string;
+  withBorder?: boolean;
 }
 
-const AppHeader = ({ onBack, navigation, pageTitle }: IProps) => {
+const AppHeader = ({
+  onBack,
+  navigation,
+  pageTitle,
+  withBorder = true,
+}: IProps) => {
   const { colors, dark } = useTheme();
 
   const data = useAppSelector((state) => state);
@@ -43,7 +49,11 @@ const AppHeader = ({ onBack, navigation, pageTitle }: IProps) => {
       <View
         style={[
           styles.container,
-          { borderColor: colors.PrimaryBorderColor, backgroundColor: "#fff" },
+          {
+            borderColor: colors.PrimaryBorderColor,
+            backgroundColor: "#fff",
+            borderBottomWidth: withBorder ? 1 : 0,
+          },
         ]}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -86,7 +96,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingTop: 10,
-    borderBottomWidth: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

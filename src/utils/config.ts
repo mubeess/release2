@@ -3,11 +3,14 @@ const config = {
     API_BASE_URL: "https://api.safsims.flexisafapps-dev.com",
   },
   staging: {
-    API_BASE_URL: "https://api.safsims-stage.com",
+    API_BASE_URL: "https://api.safsims.flexisafapps-stage.com",
   },
   production: {
     API_BASE_URL: "https://api.safsims.com",
   },
 };
 
-export default config["production"];
+export default config.development;
+// export default config[
+//   process.env.REACT_APP_ENV || process.env.NODE_ENV || "production"
+// ];

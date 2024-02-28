@@ -5,7 +5,10 @@ import type { AttendanceDateRangeBreakdownResponse } from "../models/AttendanceD
 import type { AttendanceDateRangeStatsResponse } from "../models/AttendanceDateRangeStatsResponse";
 import type { AttendanceDto } from "../models/AttendanceDto";
 import type { AttendanceRequest } from "../models/AttendanceRequest";
+import type { ClassLevelAttendanceAnalysisResponse } from "../models/ClassLevelAttendanceAnalysisResponse";
+import type { SchoolAttendanceAnalysisResponse } from "../models/SchoolAttendanceAnalysisResponse";
 import type { StudentAttendanceSummaryResponse } from "../models/StudentAttendanceSummaryResponse";
+import type { StudentClassAttendanceResponse } from "../models/StudentClassAttendanceResponse";
 
 import type { CancelablePromise } from "../core/CancelablePromise";
 import { OpenAPI } from "../core/OpenAPI";
@@ -62,6 +65,66 @@ export class AttendanceRestControllerService {
       method: "POST",
       url: "/attendance",
       body: request,
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getSchoolAttendanceAnalysis
+   * @returns SchoolAttendanceAnalysisResponse OK
+   * @throws ApiError
+   */
+  public static getSchoolAttendanceAnalysisUsingGet({
+    termId,
+  }: {
+    /**
+     * termId
+     */
+    termId: string;
+  }): CancelablePromise<SchoolAttendanceAnalysisResponse> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/attendance/analysis/{termId}",
+      path: {
+        termId: termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getClassLevelAttendanceAnalysis
+   * @returns ClassLevelAttendanceAnalysisResponse OK
+   * @throws ApiError
+   */
+  public static getClassLevelAttendanceAnalysisUsingGet({
+    classLevelId,
+    termId,
+  }: {
+    /**
+     * classLevelId
+     */
+    classLevelId: string;
+    /**
+     * termId
+     */
+    termId: string;
+  }): CancelablePromise<ClassLevelAttendanceAnalysisResponse> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/attendance/analysis/{termId}/class-level/{classLevelId}",
+      path: {
+        classLevelId: classLevelId,
+        termId: termId,
+      },
       errors: {
         401: `Unauthorized`,
         403: `Forbidden`,
@@ -167,6 +230,54 @@ export class AttendanceRestControllerService {
         studentId: studentId,
       },
       query: {
+        termId: termId,
+      },
+      errors: {
+        401: `Unauthorized`,
+        403: `Forbidden`,
+        404: `Not Found`,
+      },
+    });
+  }
+
+  /**
+   * getStudentClassLevelAttendance
+   * @returns StudentClassAttendanceResponse OK
+   * @throws ApiError
+   */
+  public static getStudentClassLevelAttendanceUsingGet({
+    endDate,
+    startDate,
+    studentId,
+    armId,
+    classLevelId,
+    termId,
+  }: {
+    /**
+     * end-date
+     */
+    endDate: string;
+    /**
+     * start-date
+     */
+    startDate: string;
+    /**
+     * student-id
+     */
+    studentId: string;
+    armId?: string;
+    classLevelId?: string;
+    termId?: string;
+  }): CancelablePromise<Array<StudentClassAttendanceResponse>> {
+    return __request(OpenAPI, {
+      method: "GET",
+      url: "/attendance/students",
+      query: {
+        armId: armId,
+        classLevelId: classLevelId,
+        "end-date": endDate,
+        "start-date": startDate,
+        "student-id": studentId,
         termId: termId,
       },
       errors: {

@@ -15,12 +15,12 @@ export type SignupRequestData = {
   module_types?: Array<"ACADEMICS" | "FEES_MANAGEMENT">;
   password: string;
   phone?: string;
+  role_in_school: string;
   school_name: string;
   school_website?: string;
   short_name: string;
   staff_range?: string;
   state?: State;
   student_range?: string;
-  subscription_plan_id?: string;
   url_prefix: string;
 };

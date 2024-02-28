@@ -3,6 +3,7 @@ import {
   BasicSchoolInformationDto,
   BasicSchoolInformationRestControllerService,
 } from "@safsims/generated";
+import { apiWrapper } from "@safsims/utils/http-client";
 import useLoading from "@safsims/utils/useLoading/useLoading";
 import { handleError } from "@safsims/utils/utils";
 import { useEffect } from "react";
@@ -25,14 +26,16 @@ const useAllSchoolsGet = () => {
     startLoading();
 
     try {
-      const data =
-        await BasicSchoolInformationRestControllerService.getAllSchoolInformationUsingGet(
+      const data = await apiWrapper(() =>
+        BasicSchoolInformationRestControllerService.getAllSchoolInformationUsingGet(
           {
             search: debouncedSearchText,
             limit,
             offset,
           }
-        );
+        )
+      );
+
       setPageable(data);
       stopLoading();
     } catch (error) {

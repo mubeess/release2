@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { lightTheme } from "@safsims/utils/Theme";
 import {
@@ -9,6 +9,7 @@ import {
   SkillsIcon,
 } from "@safsims/components/Images";
 import Icon from "@safsims/components/Icon/Icon";
+import Text from "@safsims/components/Text/Text";
 const FIRST_ROW = [
   { lable: "Result", Icon: <ResultIcon /> },
   { lable: "Skills", Icon: <SkillsIcon /> },
